@@ -1,0 +1,1 @@
+Solución / Proyecto Web [con arquitectura de tres capas] que implementa tecnologías como C# ASP.NET y ADO.NET, Stored Procedures con SQL Server Management Studio y HTML-CSS-Bootstrap. Trata de generar un RFC para poner en practica la manipulación y verificación de datos y entradas manuales de usuario, así como el manejo de posibles excepciones de C# como de lógica de negocio.

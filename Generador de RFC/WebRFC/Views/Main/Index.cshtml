@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/CSS/Reset.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+    <link href="~/CSS/IndexStyles.css" rel="stylesheet" />
+    <title>Welcome</title>
+</head>
+    <body>
+        <main>
+            <h2>RFC</h2>
+            <p>Para generar tu Registro Federal de Contribuyentes solo necesitaremos:</p>
+            <ul>
+                <li>Nombre completo en mayúsculas (sin acentos ni diéresis).</li>
+                <li>Fecha de nacimiento.</li>
+            </ul>
+            <p>¡Vamos a crear tu RFC!</p>
+            <form action="/Main/GoToGenerate" method="post">
+                <button type="submit" class="btn btn-lg btn-outline-success">Iniciar</button>
+            </form>
+            <form action="/Main/GoToRecords" method="post">
+                <button type="submit" class="btn btn-sm btn-outline-info mt-3">Registros</button>
+            </form>
+        </main>
+    </body>
+</html>

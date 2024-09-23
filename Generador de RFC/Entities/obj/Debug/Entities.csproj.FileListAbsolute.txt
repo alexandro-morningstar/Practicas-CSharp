@@ -1,0 +1,12 @@
+C:\Users\Aleja\workspace\CreadorRFC\Entities\bin\Debug\Entities.dll
+C:\Users\Aleja\workspace\CreadorRFC\Entities\bin\Debug\Entities.pdb
+C:\Users\Aleja\workspace\CreadorRFC\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\Aleja\workspace\CreadorRFC\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\workspace\CreadorRFC\Entities\obj\Debug\Entities.dll
+C:\Users\Aleja\workspace\CreadorRFC\Entities\obj\Debug\Entities.pdb
+C:\Users\Aleja\source\repos\SolRFC\Entities\bin\Debug\Entities.dll
+C:\Users\Aleja\source\repos\SolRFC\Entities\bin\Debug\Entities.pdb
+C:\Users\Aleja\source\repos\SolRFC\Entities\obj\Debug\Entities.csproj.AssemblyReference.cache
+C:\Users\Aleja\source\repos\SolRFC\Entities\obj\Debug\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\source\repos\SolRFC\Entities\obj\Debug\Entities.dll
+C:\Users\Aleja\source\repos\SolRFC\Entities\obj\Debug\Entities.pdb

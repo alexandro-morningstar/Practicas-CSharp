@@ -1,0 +1,96 @@
+-- Crear base de datos --
+CREATE DATABASE RFCDB
+
+-- Script creación de tabla --
+USE [RFCDB]
+GO
+
+/****** Object:  Table [dbo].[Users]    Script Date: 9/22/2024 10:16:38 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Users](
+	[idRFC] [int] IDENTITY(1,1) NOT NULL,
+	[name] [varchar](100) NOT NULL,
+	[paternalSurname] [varchar](100) NOT NULL,
+	[maternalSurname] [varchar](100) NULL,
+	[birthDate] [datetime] NOT NULL,
+	[rfc] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[idRFC] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-- Stored procedures --
+
+// Agregar usuario:
+CREATE PROCEDURE [dbo].[add_user]
+	@name VARCHAR(100), @paternalsurname VARCHAR(100), @maternalsurname VARCHAR(100) NULL, @birthdate DATE, @rfc VARCHAR(50)
+	AS
+	BEGIN
+		INSERT INTO Users(name,paternalSurname,maternalSurname,birthDate,rfc)
+		VALUES (@name,@paternalsurname,@maternalsurname,@birthdate,@rfc);
+	END;
+
+// Obtener por ID
+CREATE   PROCEDURE [dbo].[delete_by_id]
+@id INT
+AS BEGIN
+DELETE FROM Users WHERE idRFC=@id;
+END;
+
+// Editar usuario
+CREATE   PROCEDURE [dbo].[edit_user]
+@id INT, @name VARCHAR(100),@paternalsurname VARCHAR(100),@maternalsurname VARCHAR(100),@birthdate DATETIME,@rfc VARCHAR(50)
+AS BEGIN
+UPDATE Users SET name=@name,paternalSurname=@paternalsurname,maternalSurname=@maternalsurname,birthDate=@birthdate,rfc=@rfc WHERE idRFC=@id;
+END;
+
+// Obtener todos los usuario
+CREATE PROCEDURE [dbo].[get_all_users]
+AS
+BEGIN
+SELECT idRFC,name,paternalSurname,maternalSurname,birthDate,rfc FROM Users;
+END;
+
+// Obtener por ID
+CREATE   PROCEDURE [dbo].[get_by_id]
+@id INT
+AS BEGIN
+SELECT idRFC,name,paternalSurname,maternalSurname,birthDate,rfc FROM Users WHERE idRFC=@id;
+END;
+
+// Obtener ultimo RFC
+CREATE PROCEDURE [dbo].[get_last_rfc]
+AS BEGIN
+SELECT TOP 1 rfc FROM Users ORDER BY idRFC DESC;
+END;
+
+// Obtener ultimo usuario
+CREATE PROCEDURE [dbo].[get_last_user]
+AS BEGIN
+SELECT TOP 1 idRFC,name,paternalSurname,maternalSurname,birthDate,rfc FROM Users ORDER BY idRFC DESC;
+END;
+
+// Obtener repetido
+CREATE   PROCEDURE [dbo].[get_repeated]
+@name VARCHAR(100), @paternalsurname VARCHAR(100), @maternalsurname VARCHAR(100), @birthdate DATE, @rfc VARCHAR(50)
+AS BEGIN
+SELECT name,paternalSurname,maternalSurname,birthDate
+FROM Users
+WHERE name=@name AND paternalSurname=@paternalsurname AND maternalSurname=@maternalsurname AND birthDate=@birthdate AND rfc=@rfc;
+END;
+
+// Buscar registro
+CREATE   PROCEDURE [dbo].[search]
+@text VARCHAR(100)
+AS BEGIN
+SELECT idRFC,name,paternalSurname,maternalSurname,birthDate,rfc
+FROM Users
+WHERE idRFC LIKE '%'+@text+'%' OR name LIKE '%'+@text+'%' OR paternalSurname LIKE '%'+@text+'%' OR maternalSurname LIKE '%'+@text+'%' OR birthDate LIKE '%'+@text+'%' OR rfc LIKE '%'+@text+'%';
+END;

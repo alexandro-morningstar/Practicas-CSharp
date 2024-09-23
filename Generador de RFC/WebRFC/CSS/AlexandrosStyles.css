@@ -1,0 +1,128 @@
+﻿/* General */
+
+* { /*Reset a la pagina*/
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: black;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+section {
+    padding: 10px 100px 10px 100px; /*Definimos todos los margenes de las secciones, para reajustar solo el contenido*/
+}
+
+
+/* Services section */
+#services-menu {
+    padding: 18% 2% 18% 2%;
+    color: white;
+}
+
+    #services-menu a {
+        color: white;
+    }
+
+    #services-menu .service {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 25px;
+        padding-top: 25px;
+        /* border-bottom: 1px solid white; */
+    }
+
+@media (max-width: 1440px) { /*Si la pantalla disminuye de esta resolución, toda la linea inferior del grid se vuelve dinamica 1fr*/
+    #services-menu .service {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding-top: 25px;
+        /* border-bottom: 1px solid white; */
+    }
+}
+
+#services-menu .service h2 {
+    font-family: "Overpass Mono", monospace;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+#services-menu .service .service-title { /*Posicionamiento de elementos dentro de service en la tabla de grid*/
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+#services-menu .service .service-tools {
+    grid-column: 1/2;
+    grid-row: 2;
+}
+
+#services-menu .service .service-activities {
+    grid-column: 2/3;
+    grid-row: 2;
+    justify-self: right;
+}
+
+#services-menu .service .service-icon {
+    grid-column: 3/4;
+    grid-row: 2;
+    justify-self: right;
+    padding-right: 20px;
+}
+
+#services-menu #cybersecurity #terminal { /*Formato de color para spans en el id="cybersecurity"*/
+    color: #257DF9;
+}
+
+#services-menu .service #command {
+    color: #50AD8D;
+}
+
+#services-menu #web-dev .definition { /*Formato de color principalmente para #services-menu #web-dev pero tambien afecta a la cita del banner*/
+    color: #569CD6;
+}
+
+#services-menu #web-dev .function {
+    color: #DCDCAA;
+}
+
+#services-menu #web-dev .dot {
+    color: #D4D4D4;
+}
+
+#services-menu #web-dev .yellow-parenthesis {
+    color: #FFB100;
+}
+
+#services-menu #web-dev .variable {
+    color: #9CDCFE;
+}
+
+#services-menu #web-dev .plain-text {
+    color: #C7702E;
+}
+
+#services-menu #web-dev .pink-parenthesis {
+    color: #D13F5C;
+}
+.blinking_cursor::after { /*animación para cursor parpadeante con pseudo elemento ::after para agregar algo al final de todo lo que sea clase .blinking_cursor*/
+    content: '_';
+    animation: blink 1.5s infinite; /*blink (parpadeo) de 1.5s infinito*/
+}
+@keyframes blink { /*identificador blink definido arriba*/
+    0%, 50% {
+        opacity: 1;
+    }
+
+    50%, 100% {
+        opacity: 0;
+    }
+}

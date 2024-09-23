@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/CSS/Reset.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+    <link href="~/CSS/IndexStyles.css" rel="stylesheet" />
+    <title>RFC Creado</title>
+</head>
+<body>
+    <header class="container">
+        <div id="messages" class="mt-2">
+            @if (@TempData["error"] != null)
+            {
+                <p class="alert alert-danger">@TempData["error"]</p>
+            }
+        </div>
+    </header>
+    <main>
+        <h5>Tu RFC es:</h5>
+        <input class="form-control mb-3 mt-4" type="text" name="RFC" value="@ViewData["rfc"]" readonly />
+        <form action="/Main/GoToGenerate" method="post">
+            <button class="btn btn-outline-light mt-3">Generar otro RFC</button>
+        </form>
+        <form action="/Main/GoToRecords" method="post">
+            <button class="btn btn-outline-light mt-3">Ir a Base de Datos</button>
+        </form>
+        <form action="/Main/Index" method="post">
+            <button class="btn btn-sm btn-outline-danger mt-3">Salir</button>
+        </form>
+    </main>
+    <!--AGREGAR METODOS PARA TRAER TODOS LOS RGISTROS Y PERMITIR REPETIDOS MARCANDOLOS-->
+</body>
+</html>
