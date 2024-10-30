@@ -1,0 +1,32 @@
+﻿/*General Selectors*/
+body {
+    background-color: #202124;
+    color: white;
+}
+
+main {
+    background-color: #353535;
+    margin: 10% auto auto auto;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #FFC107;
+    width: 500px;
+}
+
+ul {
+    list-style-type: disc;
+    text-align: left;
+}
+
+input[type=text] {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*Class Selectors*/
+
+
+
+/*ID Selectors*/
+
+/*#5492B9*/

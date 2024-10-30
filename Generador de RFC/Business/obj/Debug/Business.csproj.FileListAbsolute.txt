@@ -20,3 +20,14 @@ C:\Users\Aleja\source\repos\SolRFC\Business\obj\Debug\Business.csproj.CoreCompil
 C:\Users\Aleja\source\repos\SolRFC\Business\obj\Debug\Business.csproj.Up2Date
 C:\Users\Aleja\source\repos\SolRFC\Business\obj\Debug\Business.dll
 C:\Users\Aleja\source\repos\SolRFC\Business\obj\Debug\Business.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\bin\Debug\Business.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\bin\Debug\Business.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\bin\Debug\Data.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\bin\Debug\Entities.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\bin\Debug\Data.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\bin\Debug\Entities.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\obj\Debug\Business.csproj.AssemblyReference.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\obj\Debug\Business.csproj.Up2Date
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\obj\Debug\Business.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Business\obj\Debug\Business.pdb

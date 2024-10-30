@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/CSS/Reset.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+    <link href="~/CSS/IndexStyles.css" rel="stylesheet" />
+    <title>Crear RFC</title>
+</head>
+<body>
+    <header>
+        <div id="messages" class="mt-2">
+            @if (@TempData["error"] != null)
+            {
+                <p class="alert alert-danger">@TempData["error"]</p>
+            }
+        </div>
+    </header>
+    <main>
+        <h2 class="mb-3">Ingresa los siguientes datos</h2>
+        <form action="/Main/Create" method="post">
+            <div class="mb-3 row align-items-center">
+                <div class="col-sm-4">
+                    <label class="col-form-label" for="Name">Nombre(s):</label>
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" name="Name" placeholder="Escribe aquí tu(s) nombre(s)." required />
+                </div>
+            </div>
+            <div class="mb-3 row align-items-center">
+                <div class="col-sm-4">
+                    <label class="col-form-label" for="PaternalSurname">Apellido Paterno:</label>
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" name="PaternalSurname" placeholder="Escribe aqui tu primer apellido." required />
+                </div>
+            </div>
+            <div class="mb-3 row align-item-center">
+                <div class="col-sm-4">
+                    <label class="col-form-label" for="MaternalSurname">Apellido Materno:</label>
+                </div>
+                <div class="col-sm-8">
+                    <input class="form-control" type="text" name="MaternalSurname" placeholder="Escribe aqui tu segundo apellido." />
+                </div>
+            </div>
+            <div class="mb-3 row align-items-center">
+                <div class="col-sm-5">
+                    <label class="col-form-label" for="BirthDate">Fecha de Nacimiento:</label>
+                </div>
+                <div class="col-sm-7">
+                    <input class="form-control" type="date" name="BirthDate" required />
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-outline-success btn-lg mt-3">Genera tu RFC</button>
+            </div>
+        </form>
+        <form action="/Main/Index" method="post">
+            <button class="btn btn-sm btn-outline-light mt-3" type="submit">Regresar</button>
+        </form>
+    </main>
+</body>
+</html>

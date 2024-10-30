@@ -1,0 +1,80 @@
+﻿@using Entities
+@model E_RFC
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/CSS/Reset.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+    <link href="~/CSS/RecordsStyles.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/aca4f49d6f.js" crossorigin="anonymous"></script>
+    <title>Eliminar Eegistro</title>
+</head>
+<body class="container">
+    <header>
+        <nav class="navbar fixed-top">
+            <div class="container-fluid">
+                <form action="/Main/GoToEdit?id=@Model.IdRFC" method="post">
+                    <button class="btn btn-outline-warning ms-5">
+                        Editar <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                </form>
+                <p class="navbar-brand ms-5" style="color: white;">Confirmar acción</p>
+                <form action="/Main/GoToRecords" method="post">
+                    <button type="submit" class="btn btn-outline-info me-5">
+                        <i class="fa-solid fa-arrow-left"></i> Regresar
+                    </button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="messages">
+            @if (TempData["error"] != null)
+            {
+                <p class="alert alert-danger">@TempData["error"]</p>
+                <hr />
+            }
+            @if (TempData["success"] != null)
+            {
+                <p class="alert alert-success">@TempData["success"]</p>
+                <hr />
+            }
+        </div>
+        <div>
+            <table class="table table-bordered table-hover table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>FECHA DE NACIMIENTO</th>
+                        <th>RFC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>@Model.GetIdRFC</td>
+                        <td>@Model.GetName @Model.GetPaternalSurname @Model.GetMaternalSurname</td>
+                        <td>@Model.GetBirthDate.ToString("yyyy-MM-dd")</td>
+                        <td>@Model.GetRFC</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <hr />
+        <div>
+            <form action="/Main/Delete?id=@Model.GetIdRFC" method="post">
+                <label>Marca la casilla para confirmar la acción: </label>
+                <div class="form-check form-switch mt-2">
+                    <input id="confirmationswitch" type="checkbox" role="switch" name="confirmation" value="true" class="form-check-input" />
+                    <label class="form-check-label" for="confirmationswitch">Sí, eliminar registro.</label>
+                </div>
+                <button class="btn btn-outline-danger mt-3" type="submit">Eliminar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

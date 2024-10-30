@@ -1,0 +1,113 @@
+﻿@using Entities
+@model List<E_RFC>
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/CSS/Reset.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap.css" rel="stylesheet" />
+        <link href="~/Scripts/bootstrap.js" rel="stylesheet" />
+        <link href="~/CSS/RecordsStyles.css" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/aca4f49d6f.js" crossorigin="anonymous"></script>
+        <title>Registros</title>
+    </head>
+    <body class="container">
+        <header>
+            <!--Header que contiene la barra de navegación superior-->
+            <nav class="navbar fixed-top">
+                <div class="container-fluid">
+                    <form action="/Main/Search" method="post" class="d-flex">
+                        <input id="colorplaceholder" type="search" name="text" placeholder="Busqueda por texto o número" class="form-control ms-5 me-2 col-lg-1" />
+                        <button type="submit" class="btn btn-outline-info">
+                            <i class="fa-solid fa-magnifying-glass" style="color: #5492B9;"></i>
+                        </button>
+                    </form>
+                    <p id="recordCount" class="navbar-text me-5">@ViewData["userscount"]</p>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!--Zona principal que contiene mensajes de error y la tabla de registros con acciones-->
+            <hr />
+            <div id="messages" class="">
+                @if (TempData["error"] != null)
+                {
+                    <p class="alert alert-danger">@TempData["error"]</p>
+                }
+                @if (TempData["success"] != null)
+                {
+                    <p class="alert alert-success">@TempData["success"]</p>
+                }
+            </div>
+            <div>
+                <table class="table table-bordered table-hover table-dark table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NOMBRE</th>
+                            <th>FECHA DE NACIMIENTO</th>
+                            <th>RFC</th>
+                            <th>ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (E_RFC rfc in Model)
+                        {
+                            if (rfc.GetRFC.EndsWith("*"))
+                            {
+                                <tr>
+                                    <td style="color:red;">@rfc.GetIdRFC</td>
+                                    <td style="color:red;">@rfc.GetName @rfc.GetPaternalSurname @rfc.GetMaternalSurname</td>
+                                    <td style="color:red;">@rfc.GetBirthDate.ToString("yyyy-MM-dd")</td>
+                                    <td style="color:red;">@rfc.GetRFC</td>
+                                    <td>
+                                        <a class="btn btn-outline-warning" href="/Main/GoToEdit?id=@rfc.GetIdRFC">
+                                            Editar <i class="fa-regular fa-pen-to-square"></i></a>
+                                        <a class="btn btn-outline-danger" href="/Main/GoToDelete?id=@rfc.GetIdRFC">
+                                            Eliminar <i class="fa-solid fa-delete-left"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td>@rfc.GetIdRFC</td>
+                                    <td>@rfc.GetName @rfc.GetPaternalSurname @rfc.GetMaternalSurname</td>
+                                    <td>@rfc.GetBirthDate.ToString("yyyy-MM-dd")</td>
+                                    <td>@rfc.GetRFC</td>
+                                    <td>    
+                                        <a class="btn btn-outline-warning" href="/Main/GoToEdit?id=@rfc.GetIdRFC">
+                                            Editar <i class="fa-regular fa-pen-to-square"></i>
+                                        </a>
+                                        <a class="btn btn-outline-danger" href="/Main/GoToDelete?id=@rfc.GetIdRFC">
+                                            Eliminar <i class="fa-solid fa-delete-left"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <hr />
+        </main>
+        <footer> <!--Footer que contiene la barra de navegación inferior-->
+            <nav class="navbar fixed-bottom">
+                <div class="container-fluid">
+                    <form action="/Main/GoToGenerate" method="post" class="d-flex ms-5 me-3">
+                        <button class="btn btn-outline-success">Generar otro RFC</button>
+                    </form>
+                    <form action="/Main/Index" method="post" class="d-flex me-auto">
+                        <button class="btn btn-outline-success">Inicio</button>
+                    </form>
+                    <form action="/Main/About" method="post" class="d-flex ms-auto me-5 mb-2">
+                        <button class="btn btn-outline-light">𐕣</button>
+                    </form>
+                </div>
+            </nav>
+        </footer>
+    </body>
+</html>

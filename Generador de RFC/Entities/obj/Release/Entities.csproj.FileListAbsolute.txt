@@ -1,0 +1,6 @@
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Entities\bin\Release\Entities.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Entities\bin\Release\Entities.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Entities\obj\Release\Entities.csproj.AssemblyReference.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Entities\obj\Release\Entities.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Entities\obj\Release\Entities.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Generador de RFC\Entities\obj\Release\Entities.pdb

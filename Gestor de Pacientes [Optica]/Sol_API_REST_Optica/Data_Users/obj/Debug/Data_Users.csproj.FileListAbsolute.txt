@@ -1,0 +1,11 @@
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\bin\Debug\Data_Users.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\bin\Debug\Data_Users.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\bin\Debug\Patient_Models.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\bin\Debug\Users_Models.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\bin\Debug\Patient_Models.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\bin\Debug\Users_Models.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\obj\Debug\Data_Users.csproj.AssemblyReference.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\obj\Debug\Data_Users.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\obj\Debug\Data_Users.csproj.Up2Date
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\obj\Debug\Data_Users.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Data_Users\obj\Debug\Data_Users.pdb

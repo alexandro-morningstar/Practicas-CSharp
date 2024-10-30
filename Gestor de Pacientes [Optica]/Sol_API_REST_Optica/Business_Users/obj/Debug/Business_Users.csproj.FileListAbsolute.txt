@@ -1,0 +1,15 @@
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Business_Users.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Business_Users.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Data_Users.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Patient_Models.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Users_Models.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Data_Users.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Patient_Models.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Users_Models.pdb
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\obj\Debug\Business_Users.csproj.AssemblyReference.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\obj\Debug\Business_Users.csproj.CoreCompileInputs.cache
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\obj\Debug\Business.A0C24456.Up2Date
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\obj\Debug\Business_Users.dll
+C:\Users\Aleja\Workspace\Ejercicios Completos\C#\Gestor de Pacientes [Optica]\Sol_API_REST_Optica\Business_Users\obj\Debug\Business_Users.pdb

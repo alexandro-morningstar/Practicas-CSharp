@@ -1,46 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\",
+  "WorkspaceRootPath": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|c:\\users\\aleja\\source\\repos\\solrfc\\webrfc\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|c:\\users\\aleja\\source\\repos\\solrfc\\webrfc\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\webrfc\\views\\main\\deleteview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\views\\main\\deleteview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\webrfc\\views\\main\\recordview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\views\\main\\recordview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\webrfc\\css\\recordsstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\css\\recordsstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\webrfc\\css\\indexstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\css\\indexstyles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{023CE968-E529-4BD9-8929-0C8A5AB2F133}|Data\\Data.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\data\\d_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{023CE968-E529-4BD9-8929-0C8A5AB2F133}|Data\\Data.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\generador de rfc\\data\\d_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{023CE968-E529-4BD9-8929-0C8A5AB2F133}|Data\\Data.csproj|solutionrelative:data\\d_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\webrfc\\views\\main\\generateview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\views\\main\\generateview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C3DE01DE-1D81-4FC5-9CFC-7AD60CAD4AB6}|Business\\Business.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\business\\b_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C3DE01DE-1D81-4FC5-9CFC-7AD60CAD4AB6}|Business\\Business.csproj|solutionrelative:business\\b_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\webrfc\\views\\main\\editview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\views\\main\\editview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\webrfc\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3051DA82-C436-498E-92AD-480306145017}|Entities\\Entities.csproj|C:\\Users\\Aleja\\source\\repos\\SolRFC\\entities\\e_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3051DA82-C436-498E-92AD-480306145017}|Entities\\Entities.csproj|solutionrelative:entities\\e_rfc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\webrfc\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\webrfc\\views\\main\\recordview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4D0CB6FE-CD45-42F1-99D7-45EE7817E65B}|WebRFC\\WebRFC.csproj|solutionrelative:webrfc\\views\\main\\recordview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,34 +30,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainController.cs",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Controllers\\MainController.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\WebRFC\\Controllers\\MainController.cs",
               "RelativeDocumentMoniker": "WebRFC\\Controllers\\MainController.cs",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Controllers\\MainController.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\WebRFC\\Controllers\\MainController.cs",
               "RelativeToolTip": "WebRFC\\Controllers\\MainController.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAwBQAAAAJAAAA",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwCgAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T15:41:51.949Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Web.config",
-              "RelativeDocumentMoniker": "WebRFC\\Web.config",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Web.config",
-              "RelativeToolTip": "WebRFC\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-09-15T20:24:01.419Z",
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -89,95 +55,49 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "B_RFC.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\Business\\B_RFC.cs",
+              "RelativeDocumentMoniker": "Business\\B_RFC.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\Business\\B_RFC.cs",
+              "RelativeToolTip": "Business\\B_RFC.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T01:00:11.784Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DeleteView.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\DeleteView.cshtml",
-              "RelativeDocumentMoniker": "WebRFC\\Views\\Main\\DeleteView.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\DeleteView.cshtml",
-              "RelativeToolTip": "WebRFC\\Views\\Main\\DeleteView.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAAEoAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-21T15:45:43.902Z"
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\WebRFC\\Web.config",
+              "RelativeDocumentMoniker": "WebRFC\\Web.config",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\WebRFC\\Web.config",
+              "RelativeToolTip": "WebRFC\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-09-15T20:24:01.419Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IndexStyles.css",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\CSS\\IndexStyles.css",
-              "RelativeDocumentMoniker": "WebRFC\\CSS\\IndexStyles.css",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\CSS\\IndexStyles.css",
-              "RelativeToolTip": "WebRFC\\CSS\\IndexStyles.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-02T22:57:18.189Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GenerateView.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\GenerateView.cshtml",
-              "RelativeDocumentMoniker": "WebRFC\\Views\\Main\\GenerateView.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\GenerateView.cshtml",
-              "RelativeToolTip": "WebRFC\\Views\\Main\\GenerateView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-02T22:56:27.726Z"
+              "DocumentIndex": 0,
+              "Title": "D_RFC.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\Data\\D_RFC.cs",
+              "RelativeDocumentMoniker": "Data\\D_RFC.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\Data\\D_RFC.cs",
+              "RelativeToolTip": "Data\\D_RFC.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA1wOAAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T15:42:17.024Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "RecordsStyles.css",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\CSS\\RecordsStyles.css",
-              "RelativeDocumentMoniker": "WebRFC\\CSS\\RecordsStyles.css",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\CSS\\RecordsStyles.css",
-              "RelativeToolTip": "WebRFC\\CSS\\RecordsStyles.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-08-02T22:48:05.697Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EditView.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\EditView.cshtml",
-              "RelativeDocumentMoniker": "WebRFC\\Views\\Main\\EditView.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\EditView.cshtml",
-              "RelativeToolTip": "WebRFC\\Views\\Main\\EditView.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-02T17:56:01.912Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "E_RFC.cs",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\Entities\\E_RFC.cs",
-              "RelativeDocumentMoniker": "Entities\\E_RFC.cs",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\Entities\\E_RFC.cs",
-              "RelativeToolTip": "Entities\\E_RFC.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T15:42:17.866Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "D_RFC.cs",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\Data\\D_RFC.cs",
-              "RelativeDocumentMoniker": "Data\\D_RFC.cs",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\Data\\D_RFC.cs",
-              "RelativeToolTip": "Data\\D_RFC.cs",
-              "ViewState": "AQIAAJ4AAAAAAAAAAAAIwB4AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T15:42:17.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "RecordView.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\RecordView.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\WebRFC\\Views\\Main\\RecordView.cshtml",
               "RelativeDocumentMoniker": "WebRFC\\Views\\Main\\RecordView.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\SolRFC\\WebRFC\\Views\\Main\\RecordView.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Generador de RFC\\WebRFC\\Views\\Main\\RecordView.cshtml",
               "RelativeToolTip": "WebRFC\\Views\\Main\\RecordView.cshtml",
               "ViewState": "AQIAADAAAAAAAAAAAAAAAEEAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
