@@ -17,6 +17,12 @@ namespace API_REST_Optica.Controllers
         public B_App_In businessAppInTools = new B_App_In();
         public B_App_Out businessAppOutTools = new B_App_Out();
 
+        /// <summary>
+        /// Haya encontrado una coincidencia o no, retorna un usuario (lleno o vacío) para su manejo en el lado del cliente.
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns>Objeto de tipo Users</returns>
         [HttpGet]
         public Users Login(string username, string password)
         {
@@ -31,12 +37,16 @@ namespace API_REST_Optica.Controllers
             }
         }
 
-        // GET api/values
+        /// <summary>
+        /// Obtiene la vista previa de todos los registros de pacientes en objetos PatientOverview previamente ensamblados en la capa de negocio.
+        /// </summary>
+        /// <returns>Lista de objetos PatientsOverview</returns>
         [HttpGet]
         [Route("api/Values/PatientsOverview")]
         public List<PatientsOverview> GetPatientsOverview()
         {
             List<PatientsOverview> allPatientsOverview = new List<PatientsOverview>();
+
             try
             {
                 allPatientsOverview = businessAppOutTools.B_GetAllPatientsOverview();
@@ -48,6 +58,33 @@ namespace API_REST_Optica.Controllers
             }
         }
 
+        /// <summary>
+        /// Obtiene la lista de pacientes que tienen coincidencia (Nombre(s) y/o Apellido(s)) con la string ingresada.
+        /// </summary>
+        /// <param name="searchString"></param>
+        /// <returns>Lista de objetos de tipo PatientsOverview</returns>
+        [HttpGet]
+        [Route("api/Values/Search")]
+        public List<PatientsOverview> Search(string searchString)
+        {
+            List<PatientsOverview> searchedPatientsOverview = new List<PatientsOverview>();
+
+            try
+            {
+                searchedPatientsOverview = businessAppOutTools.B_SearchPatients(searchString);
+                return searchedPatientsOverview;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Solicitud POST para el registro de nuevo paciente.
+        /// </summary>
+        /// <param name="newPatient"></param>
+        /// <param name="listOfDiseases"></param>
         [HttpPost]
         public void AddPatient(Patients newPatient, string listOfDiseases)
         {
@@ -75,6 +112,10 @@ namespace API_REST_Optica.Controllers
         //    }
         //}
 
+        /// <summary>
+        /// Solicitud GET para obtener una lista con todos los posibles padecimientos más comunes (se usa para la dropdownlist en el formulario de registro de paciente).
+        /// </summary>
+        /// <returns>Lista de objetos de tipo Diseases</returns>
         [HttpGet]
         [Route("api/Values/GetDiseases")]
         public List<Diseases> GetDiseases()

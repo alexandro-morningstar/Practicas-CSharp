@@ -22,7 +22,7 @@ namespace Data_Users
         /// <summary>
         /// Obtiene todos los registros de la tabla Patients (Todos los pacientes).
         /// </summary>
-        /// <returns>List<Patients></returns>
+        /// <returns>Lista de tipo Patients</returns>
         public List<Patients> getAllPatients()
         {
             List<Patients> allPatients = new List<Patients>();
@@ -68,11 +68,45 @@ namespace Data_Users
                 throw ex;
             }
         }
+        
+        /// <summary>
+        /// Comprueba que existan registros de historia clínica (en ambos ojos) relacionados al usuario con ID especificado.
+        /// True == Posee registros asociados.
+        /// </summary>
+        /// <param name="patientId"></param>
+        /// <returns>bool</returns>
+        public bool HasMR(int patientId)
+        {
+            try
+            {
+                using (SqlConnection sqlMRConnection = new SqlConnection(app_connection))
+                {
+                    sqlMRConnection.Open();
+                    SqlCommand getIdsWithMRConnection = new SqlCommand("Get_Ids_WithMR", sqlMRConnection);
+                    getIdsWithMRConnection.CommandType = CommandType.StoredProcedure;
+
+                    getIdsWithMRConnection.Parameters.AddWithValue("@id", patientId);
+
+                    SqlDataReader idsReader = getIdsWithMRConnection.ExecuteReader();
+                    if (idsReader.Read())
+                    { //Si hay algo que leer (si existe coincidencia de registros de historia clinica en ambos ojos) es true
+                        return true;
+                    }
+                    
+                    else { return false; }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
 
         /// <summary>
         /// Agregar (registra) un nuevo paciente en la base de datos.
         /// </summary>
-        /// <param name="newPatient">Patients: Objeto Patients</param>
+        /// <param name="newPatient"></param>
         public void AddPatient(Patients newPatient)
         {
             try
@@ -181,7 +215,7 @@ namespace Data_Users
         /// <summary>
         /// Retorna una lista con todas los objetos/registros Disease encontrados en la base de datos.
         /// </summary>
-        /// <returns>List<Diseases></returns>
+        /// <returns>Lista de objetos de tipo Diseases</returns>
         public List<Diseases> GetDiseases()
         {
             List<Diseases> allDiseases = new List<Diseases>();
