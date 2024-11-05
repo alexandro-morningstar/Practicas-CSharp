@@ -98,20 +98,6 @@ namespace API_REST_Optica.Controllers
             }
         }
 
-        //[HttpPost]
-        //[Route("api/Values/AddPatientDisease")]
-        //public void AddPatientDisease(int patientId, int[] diseaseIds)
-        //{
-        //    try
-        //    {
-        //        businessAppInTools.B_AddPatientDisease(patientId, diseaseIds);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
         /// <summary>
         /// Solicitud GET para obtener una lista con todos los posibles padecimientos más comunes (se usa para la dropdownlist en el formulario de registro de paciente).
         /// </summary>
@@ -130,6 +116,64 @@ namespace API_REST_Optica.Controllers
                 throw ex;
             }
         }
+
+        [HttpGet]
+        [Route("api/Values/GetDioptersMR")]
+        public List<Diopters> GetDioptersMR()
+        {
+            List<Diopters> dioptersMR = new List<Diopters>();
+            try
+            {
+                return dioptersMR = businessAppOutTools.B_GetDioptersToMR();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpPost]
+        [Route("api/Values/AddMedicalRecord")]
+        public void AddMedicalRecord(MedicalRecord medicalRecord)
+        {
+            try
+            {
+                businessAppInTools.B_AddMedicalRecord(medicalRecord);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpGet]
+        [Route("api/Values/GetPatientDetails")]
+        public PatientDetails GetPatientDetails(int patientID)
+        {
+            PatientDetails patientDetails = new PatientDetails();
+            try
+            {
+                return patientDetails = businessAppOutTools.Get_Patient_Details(patientID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //[HttpPost]
+        //[Route("api/Values/AddPatientDisease")]
+        //public void AddPatientDisease(int patientId, int[] diseaseIds)
+        //{
+        //    try
+        //    {
+        //        businessAppInTools.B_AddPatientDisease(patientId, diseaseIds);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw ex;
+        //    }
+        //}
 
         //public IEnumerable<string> Get()
         //{

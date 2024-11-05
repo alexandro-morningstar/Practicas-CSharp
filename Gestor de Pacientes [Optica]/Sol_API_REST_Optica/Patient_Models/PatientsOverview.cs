@@ -14,6 +14,7 @@ namespace Patient_Models
         public string LastName { get; set; }
         public decimal Due { get; set; }
         public bool HasMedicalRecord { get; set; }
+        public bool HasOrders { get; set; }
 
         private string _fullName { get; set; }
         public string FullName

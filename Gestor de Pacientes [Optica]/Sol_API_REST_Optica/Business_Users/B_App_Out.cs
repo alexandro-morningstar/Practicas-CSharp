@@ -35,6 +35,7 @@ namespace Business_Users
                 patientOverview.LastName = patient.LastName;
                 patientOverview.Due = patient.Due;
                 patientOverview.HasMedicalRecord = dataAppTools.HasMR(patient.PatientId); //HasMR (Medical Record) retorna true or false
+                patientOverview.HasOrders = dataAppTools.HasOrder(patient.PatientId); //HasOrder retorna true or false
 
                 allPatientsOverview.Add(patientOverview);
             }
@@ -79,6 +80,43 @@ namespace Business_Users
             {
                 List<Diseases> allDiseases = dataAppTools.GetDiseases();
                 return allDiseases;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        /// <summary>
+        /// Capa de negocio: Obtiene todos los registros de dioptrias para generar las historias clínicas (valores entre -30 a 30).
+        /// </summary>
+        /// <returns>Lista de objetos de tipo Diopters</returns>
+        public List<Diopters> B_GetDioptersToMR()
+        {
+            try
+            {
+                List<Diopters> dioptersMR = dataAppTools.GetDioptersToMR();
+                return dioptersMR;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public PatientDetails Get_Patient_Details(int patientID)
+        {
+            try
+            {
+                PatientDetails patientDetails = new PatientDetails()
+                {
+                    Patient = dataAppTools.getPatientById(patientID),
+                    Diseases = dataAppTools.Get_Patient_Diseases(patientID),
+                    LeftEyeRx = dataAppTools.Get_LeftEye_Overview(patientID),
+                    RightEyeRx = dataAppTools.Get_RightEye_Overview(patientID)
+                };
+
+                return patientDetails;
             }
             catch (Exception ex)
             {

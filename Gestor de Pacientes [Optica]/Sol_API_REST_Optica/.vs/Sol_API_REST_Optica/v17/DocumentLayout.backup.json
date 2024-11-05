@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0E186E94-3193-4923-955A-A8A16D391179}|API_REST_Optica\\API_REST_Optica.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_api_rest_optica\\api_rest_optica\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0E186E94-3193-4923-955A-A8A16D391179}|API_REST_Optica\\API_REST_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\api_rest_optica\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0E186E94-3193-4923-955A-A8A16D391179}|API_REST_Optica\\API_REST_Optica.csproj|solutionrelative:api_rest_optica\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,16 +11,28 @@
       "RelativeMoniker": "D:0:0:{63F6C7D6-B0D2-4741-A6EF-105B4927E1EF}|Business_Users\\Business_Users.csproj|solutionrelative:business_users\\b_app_out.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{63F6C7D6-B0D2-4741-A6EF-105B4927E1EF}|Business_Users\\Business_Users.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\business_users\\b_app_in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{63F6C7D6-B0D2-4741-A6EF-105B4927E1EF}|Business_Users\\Business_Users.csproj|solutionrelative:business_users\\b_app_in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ADA49EAF-281F-4ACC-9E01-08112B6385AC}|Data_Users\\Data_Users.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_api_rest_optica\\data_users\\d_app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ADA49EAF-281F-4ACC-9E01-08112B6385AC}|Data_Users\\Data_Users.csproj|solutionrelative:data_users\\d_app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ADA49EAF-281F-4ACC-9E01-08112B6385AC}|Data_Users\\Data_Users.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\data_users\\d_app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ADA49EAF-281F-4ACC-9E01-08112B6385AC}|Data_Users\\Data_Users.csproj|solutionrelative:data_users\\d_app.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74F2CDFF-9EA3-4142-8E9D-0FF909FAEC35}|Patient_Models\\Patient_Models.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_api_rest_optica\\patient_models\\patientdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F2CDFF-9EA3-4142-8E9D-0FF909FAEC35}|Patient_Models\\Patient_Models.csproj|solutionrelative:patient_models\\patientdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F2CDFF-9EA3-4142-8E9D-0FF909FAEC35}|Patient_Models\\Patient_Models.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_api_rest_optica\\patient_models\\eyeoverview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F2CDFF-9EA3-4142-8E9D-0FF909FAEC35}|Patient_Models\\Patient_Models.csproj|solutionrelative:patient_models\\eyeoverview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74F2CDFF-9EA3-4142-8E9D-0FF909FAEC35}|Patient_Models\\Patient_Models.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_api_rest_optica\\patient_models\\diseases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74F2CDFF-9EA3-4142-8E9D-0FF909FAEC35}|Patient_Models\\Patient_Models.csproj|solutionrelative:patient_models\\diseases.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ADA49EAF-281F-4ACC-9E01-08112B6385AC}|Data_Users\\Data_Users.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\data_users\\d_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ADA49EAF-281F-4ACC-9E01-08112B6385AC}|Data_Users\\Data_Users.csproj|solutionrelative:data_users\\d_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63F6C7D6-B0D2-4741-A6EF-105B4927E1EF}|Business_Users\\Business_Users.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\business_users\\b_app_in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{63F6C7D6-B0D2-4741-A6EF-105B4927E1EF}|Business_Users\\Business_Users.csproj|solutionrelative:business_users\\b_app_in.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{63F6C7D6-B0D2-4741-A6EF-105B4927E1EF}|Business_Users\\Business_Users.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\business_users\\b_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,12 +45,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 205,
           "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "D_Login.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Data_Users\\D_Login.cs",
               "RelativeDocumentMoniker": "Data_Users\\D_Login.cs",
@@ -47,11 +59,12 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-09T00:19:09.506Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "B_Login.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Business_Users\\B_Login.cs",
               "RelativeDocumentMoniker": "Business_Users\\B_Login.cs",
@@ -64,16 +77,17 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "D_App.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Data_Users\\D_App.cs",
               "RelativeDocumentMoniker": "Data_Users\\D_App.cs",
               "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Data_Users\\D_App.cs",
               "RelativeToolTip": "Data_Users\\D_App.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANkAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAawEgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-12T01:29:10.916Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -83,7 +97,7 @@
               "RelativeDocumentMoniker": "API_REST_Optica\\Controllers\\ValuesController.cs",
               "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\API_REST_Optica\\Controllers\\ValuesController.cs",
               "RelativeToolTip": "API_REST_Optica\\Controllers\\ValuesController.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAqwG8AAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAcwJcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T01:08:10.774Z",
               "IsPinned": true,
@@ -96,24 +110,64 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PatientDetails.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Patient_Models\\PatientDetails.cs",
+              "RelativeDocumentMoniker": "Patient_Models\\PatientDetails.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Patient_Models\\PatientDetails.cs",
+              "RelativeToolTip": "Patient_Models\\PatientDetails.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:49:11.846Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EyeOverview.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Patient_Models\\EyeOverview.cs",
+              "RelativeDocumentMoniker": "Patient_Models\\EyeOverview.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Patient_Models\\EyeOverview.cs",
+              "RelativeToolTip": "Patient_Models\\EyeOverview.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T01:08:01.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Diseases.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Patient_Models\\Diseases.cs",
+              "RelativeDocumentMoniker": "Patient_Models\\Diseases.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Patient_Models\\Diseases.cs",
+              "RelativeToolTip": "Patient_Models\\Diseases.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T00:41:28.616Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 200,
+          "DockedWidth": 195,
           "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "B_App_In.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Business_Users\\B_App_In.cs",
               "RelativeDocumentMoniker": "Business_Users\\B_App_In.cs",
               "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Business_Users\\B_App_In.cs",
               "RelativeToolTip": "Business_Users\\B_App_In.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwB4AAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-12T02:35:03.994Z"
+              "WhenOpened": "2024-10-12T02:35:03.994Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -123,7 +177,7 @@
               "RelativeDocumentMoniker": "Business_Users\\B_App_Out.cs",
               "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_API_REST_Optica\\Business_Users\\B_App_Out.cs",
               "RelativeToolTip": "Business_Users\\B_App_Out.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAowGsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T00:20:38.855Z",
               "EditorCaption": ""

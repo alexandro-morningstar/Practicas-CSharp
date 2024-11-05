@@ -43,14 +43,11 @@ namespace Business_Users
             newPatient.MiddleName.Trim();
             newPatient.LastName.Trim();
 
-            //La deuda siempre inicia en cero.
-            newPatient.Due = 0;
+            newPatient.Due = 0; //La deuda siempre inicia en cero.
 
-            //Convertir campos a string
-            Convert.ToString(newPatient.ContactNumber);
+            Convert.ToString(newPatient.ContactNumber); //Convertir campos a string
 
-            //Desearizar la lista de padecimientos
-            int[] diseaseIds = JsonConvert.DeserializeObject<int[]>(listOfDiseases);
+            int[] diseaseIds = JsonConvert.DeserializeObject<int[]>(listOfDiseases); //Desearizar la lista de padecimientos
 
             /*Si la lista de padecimientos viene vacia, llamamos al método que únicamente registra un paciente
              de lo contrario, llamamos al método que agrega al paciente y los padecimientos.*/
@@ -62,6 +59,19 @@ namespace Business_Users
             {
                 dataAppTools.AddPatient(newPatient); //Llamamos al método para agregar usuarios con los campos checkeados y la deduda en cero (y no null).
             }
+        }
+
+        /// <summary>
+        /// Desempaqueta el objeto de tipo MedicalRecord en dos objetos del tipo LeftEyesRx y RightEyesRx
+        /// para enviarselo al método correspondiente en la capa de datos y generar los registros.
+        /// </summary>
+        /// <param name="medicalRecord"></param>
+        public void B_AddMedicalRecord(MedicalRecord medicalRecord)
+        {
+            LeftEyesRx lefteye = medicalRecord.LeftEye;
+            RightEyesRx righteye = medicalRecord.RightEye;
+
+            dataAppTools.AddMedicalRecord(lefteye, righteye);
         }
 
         /// <summary>

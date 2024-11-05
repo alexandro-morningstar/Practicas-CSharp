@@ -68,7 +68,172 @@ namespace Data_Users
                 throw ex;
             }
         }
-        
+
+        public Patients getPatientById(int patientID)
+        {
+            Patients patient = new Patients();
+            Genders patientGender = new Genders();
+            try
+            {
+                using (SqlConnection getPatientConnection = new SqlConnection(app_connection))
+                {
+                    getPatientConnection.Open();
+
+                    using (SqlCommand getPatientCommand = new SqlCommand("Get_Patient_Details", getPatientConnection))
+                    {
+                        getPatientCommand.CommandType = CommandType.StoredProcedure;
+                        getPatientCommand.Parameters.AddWithValue("@patientid", patientID);
+
+                        using (SqlDataReader patientReader = getPatientCommand.ExecuteReader())
+                        {
+                            if (patientReader.Read())
+                            {
+                                patient.PatientId = Convert.ToInt32(patientReader["PatientId"]);
+                                patient.FirstName = Convert.ToString(patientReader["FirstName"]);
+                                patient.MiddleName = Convert.ToString(patientReader["Middlename"]);
+                                patient.LastName = Convert.ToString(patientReader["LastName"]);
+                                patient.Age = Convert.ToInt32(patientReader["Age"]);
+                                patient.AnotherDiseases = Convert.ToString(patientReader["AnotherDiseases"]);
+                                patient.ContactNumber = Convert.ToString(patientReader["ContactNumber"]);
+                                patient.Due = Convert.ToDecimal(patientReader["Due"]);
+                                patient.RegistryDate = Convert.ToDateTime(patientReader["RegistryDate"]);
+
+                                patientGender.Gender = Convert.ToString(patientReader["Gender"]);
+
+                                patient.Gender = patientGender; //Join
+                            }
+
+                            return patient;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Diseases> Get_Patient_Diseases(int patientID)
+        {
+            List<Diseases> patientDiseases = new List<Diseases>();
+            try
+            {
+                using (SqlConnection getDiseasesConnection = new SqlConnection(app_connection))
+                {
+                    getDiseasesConnection.Open();
+
+                    using (SqlCommand getDiseasesCommand = new SqlCommand("Get_Patient_Diseases", getDiseasesConnection))
+                    {
+                        getDiseasesCommand.CommandType = CommandType.StoredProcedure;
+                        getDiseasesCommand.Parameters.AddWithValue("@idpatient", patientID);
+
+                        using (SqlDataReader diseaseReader = getDiseasesCommand.ExecuteReader())
+                        {
+                            while (diseaseReader.Read())
+                            {
+                                Diseases disease = new Diseases();
+
+                                disease.DiseaseId = Convert.ToInt32(diseaseReader["DiseaseId"]);
+                                disease.Disease = Convert.ToString(diseaseReader["Disease"]);
+
+                                patientDiseases.Add(disease);
+                            }
+
+                            return patientDiseases;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public LeftEyesRx Get_LeftEye_Overview(int patientId)
+        {
+            LeftEyesRx leftEye = new LeftEyesRx();
+            EyeOverview leftEyeOverview = new EyeOverview();
+
+            try
+            {
+                using (SqlConnection getLeftEyeConnection = new SqlConnection(app_connection))
+                {
+                    getLeftEyeConnection.Open();
+
+                    using (SqlCommand getLeftEyeCommand = new SqlCommand("Get_Patients_LeftEye", getLeftEyeConnection))
+                    {
+                        getLeftEyeCommand.CommandType = CommandType.StoredProcedure;
+                        getLeftEyeCommand.Parameters.AddWithValue("@idpatientleft", patientId);
+
+                        using (SqlDataReader leftEyeReader = getLeftEyeCommand.ExecuteReader())
+                        {
+                            if (leftEyeReader.Read())
+                            {
+                                leftEye.LeftEyeRxId = Convert.ToInt32(leftEyeReader["LeftEyeRxId"]);
+                                leftEye.IdPatientLeft = Convert.ToInt32(leftEyeReader["IdPatientLeft"]);
+                                leftEye.AxisLeft = Convert.ToInt32(leftEyeReader["AxisLeft"]);
+
+                                leftEyeOverview.sphere = Convert.ToDecimal(leftEyeReader["SphereLeft"]);
+                                leftEyeOverview.cylinder = Convert.ToDecimal(leftEyeReader["CylinderLeft"]);
+                                leftEyeOverview.addition = Convert.ToDecimal(leftEyeReader["AdditionLeft"]);
+
+                                leftEye.LeftEyeOverview = leftEyeOverview;
+                            }
+                            return leftEye;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public RightEyesRx Get_RightEye_Overview(int patientID)
+        {
+            RightEyesRx rightEye = new RightEyesRx();
+            EyeOverview rightEyeOverview = new EyeOverview();
+
+            try
+            {
+                using (SqlConnection getRightEyeConnection = new SqlConnection(app_connection))
+                {
+                    getRightEyeConnection.Open();
+
+                    using (SqlCommand getRightEyeCommand = new SqlCommand("Get_Patients_RightEye", getRightEyeConnection))
+                    {
+                        getRightEyeCommand.CommandType = CommandType.StoredProcedure;
+                        getRightEyeCommand.Parameters.AddWithValue("@idpatientright", patientID);
+
+                        using (SqlDataReader rightEyeReader = getRightEyeCommand.ExecuteReader())
+                        {
+                            if (rightEyeReader.Read())
+                            {
+                                rightEye.RightEyeRxId = Convert.ToInt32(rightEyeReader["RightEyeRxId"]);
+                                rightEye.IdPatientRight = Convert.ToInt32(rightEyeReader["IdPatientRight"]);
+                                rightEye.AxisRight = Convert.ToInt32(rightEyeReader["AxisRight"]);
+
+                                rightEyeOverview.sphere = Convert.ToDecimal(rightEyeReader["SphereRight"]);
+                                rightEyeOverview.cylinder = Convert.ToDecimal(rightEyeReader["CylinderRight"]);
+                                rightEyeOverview.addition = Convert.ToDecimal(rightEyeReader["AdditionRight"]);
+
+                                rightEye.RightEyeOverview = rightEyeOverview;
+                            }
+
+                            return rightEye;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Comprueba que existan registros de historia clínica (en ambos ojos) relacionados al usuario con ID especificado.
         /// True == Posee registros asociados.
@@ -92,11 +257,37 @@ namespace Data_Users
                     { //Si hay algo que leer (si existe coincidencia de registros de historia clinica en ambos ojos) es true
                         return true;
                     }
-                    
                     else { return false; }
 
                 }
             }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool HasOrder(int patientId)
+        {
+            try
+            {
+                using (SqlConnection hasOrdersConnection = new SqlConnection(app_connection))
+                {
+                    hasOrdersConnection.Open();
+                    SqlCommand getIdsWithOrdersCommand = new SqlCommand("Get_Ids_With_Orders", hasOrdersConnection);
+                    getIdsWithOrdersCommand.CommandType = CommandType.StoredProcedure;
+
+                    getIdsWithOrdersCommand.Parameters.AddWithValue("@id", patientId);
+
+                    SqlDataReader idsReader = getIdsWithOrdersCommand.ExecuteReader();
+                    if (idsReader.Read())
+                    {
+                        return true;
+                    }
+                    else { return false; }
+                }
+            }
+
             catch (Exception ex)
             {
                 throw ex;
@@ -229,7 +420,7 @@ namespace Data_Users
                     getDiseasesCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
                     SqlDataReader diseasesReader = getDiseasesCommand.ExecuteReader();
-                    while(diseasesReader.Read())
+                    while (diseasesReader.Read())
                     {
                         Diseases disease = new Diseases();
 
@@ -246,5 +437,89 @@ namespace Data_Users
                 throw ex;
             }
         }
+
+        /// <summary>
+        /// Obtiene todos los registros de dioptrias para generar las historias clínicas (valores entre -30 a 30)
+        /// </summary>
+        /// <returns>Lista de objetos de tipo Diopters</returns>
+        public List<Diopters> GetDioptersToMR()
+        {
+            List<Diopters> dioptersMR = new List<Diopters>();
+            try
+            {
+                using (SqlConnection getDioptersConnection = new SqlConnection(app_connection))
+                {
+                    getDioptersConnection.Open();
+
+                    SqlCommand getDioptersMRCommand = new SqlCommand("Get_Diopters_ToMR", getDioptersConnection);
+                    getDioptersMRCommand.CommandType = CommandType.StoredProcedure;
+
+                    SqlDataReader dioptersReader = getDioptersMRCommand.ExecuteReader();
+
+                    while (dioptersReader.Read())
+                    {
+                        Diopters diopter = new Diopters();
+
+                        diopter.DiopterId = Convert.ToInt32(dioptersReader["DiopterId"]);
+                        diopter.DiopterValue = Convert.ToDecimal(dioptersReader["DiopterValue"]);
+
+                        dioptersMR.Add(diopter);
+                    }
+
+                    return dioptersMR;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void AddMedicalRecord(LeftEyesRx lefteye, RightEyesRx righteye)
+        {
+            try
+            {
+                using (TransactionScope mrScope = new TransactionScope())
+                {
+                    using (SqlConnection addMRConnection = new SqlConnection(app_connection))
+                    {
+                        addMRConnection.Open();
+
+                        using (SqlCommand addLeftEyeCommand = new SqlCommand("Add_LeftEye", addMRConnection))
+                        {
+                            addLeftEyeCommand.CommandType = CommandType.StoredProcedure;
+
+                            addLeftEyeCommand.Parameters.AddWithValue("@idsphereleft", lefteye.IdSphereLeft);
+                            addLeftEyeCommand.Parameters.AddWithValue("@idcylinderleft", lefteye.IdCylinderLeft);
+                            addLeftEyeCommand.Parameters.AddWithValue("@axisleft", lefteye.AxisLeft);
+                            addLeftEyeCommand.Parameters.AddWithValue("@additionleft", lefteye.AdditionLeft);
+                            addLeftEyeCommand.Parameters.AddWithValue("@idpatientleft", lefteye.IdPatientLeft);
+
+                            addLeftEyeCommand.ExecuteNonQuery();
+                        }
+
+                        using (SqlCommand addRightEyeCommand = new SqlCommand("Add_RightEye", addMRConnection))
+                        {
+                            addRightEyeCommand.CommandType = CommandType.StoredProcedure;
+
+                            addRightEyeCommand.Parameters.AddWithValue("@idsphereright", righteye.IdSphereRight);
+                            addRightEyeCommand.Parameters.AddWithValue("@idcylinderright", righteye.IdCylinderRight);
+                            addRightEyeCommand.Parameters.AddWithValue("@axisright", righteye.AxisRight);
+                            addRightEyeCommand.Parameters.AddWithValue("@additionright", righteye.AdditionRight);
+                            addRightEyeCommand.Parameters.AddWithValue("@idpatientright", righteye.IdPatientRight);
+
+                            addRightEyeCommand.ExecuteNonQuery();
+                        }
+
+                        mrScope.Complete();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
