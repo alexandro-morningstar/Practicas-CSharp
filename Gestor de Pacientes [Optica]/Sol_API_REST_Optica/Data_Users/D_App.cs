@@ -383,6 +383,7 @@ namespace Data_Users
 
                             foreach (int idDisease in diseaseIds) //Puede haber más de un padecimiento en la lista, generamos un registro por cada uno.
                             {
+                                addPatientDiseaseCommand.Parameters.Clear(); // Limpiar los parámetros antes de cada iteración
 
                                 addPatientDiseaseCommand.Parameters.AddWithValue("@idpatient", currentID);
                                 addPatientDiseaseCommand.Parameters.AddWithValue("@iddisease", idDisease);
