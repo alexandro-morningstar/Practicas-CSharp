@@ -97,7 +97,9 @@ namespace Data_Users
                                 patient.ContactNumber = Convert.ToString(patientReader["ContactNumber"]);
                                 patient.Due = Convert.ToDecimal(patientReader["Due"]);
                                 patient.RegistryDate = Convert.ToDateTime(patientReader["RegistryDate"]);
+                                patient.IdGender = Convert.ToInt32(patientReader["IdGender"]);
 
+                                patientGender.GenderId = Convert.ToInt32(patientReader["IdGender"]);
                                 patientGender.Gender = Convert.ToString(patientReader["Gender"]);
 
                                 patient.Gender = patientGender; //Join
