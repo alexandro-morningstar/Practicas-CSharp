@@ -1,0 +1,122 @@
+﻿@using Web_Cliente_Optica.Models;
+@model List<PatientsOverview>
+
+@{
+    ViewBag.Title = "Index";
+}
+<link href="~/CSS/DashboardStyles.css" rel="stylesheet" />
+<link href="~/CSS/NavbarStyles.css" rel="stylesheet" />
+
+<header class="fixed-top">
+    <!--Inicio de barra de navegación superior-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="d-flex">
+                @*<a class="navbar-brand btn btn-outline-light" href="#">
+                    <i class="fa-solid fa-house-user"></i>
+                    Inicio
+                </a>*@
+                <a class="align-content-center btn btn-outline-light" aria-current="page" href="/Home/AddUser/">
+                    <i class="fa-solid fa-user-plus"></i>
+                    Nuevo Paciente
+                </a>
+            </div>
+            <div class="d-flex flex-wrap">
+                <span class="reloj me-3 align-content-center" id="reloj">00:00:00</span>
+                <span class="matriz align-content-center" id="matriz"></span>
+            </div>
+            <div>
+                <form class="d-flex" role="search" action="/Home/Search/">
+                    <input name="searchString" class="form-control me-2" type="search" placeholder="Busqueda por nombre" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">
+                        @if (ViewBag.IsSearch == true)
+                        {
+                            <i class="fa-solid fa-broom"></i>
+                        }
+                        else
+                        {
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        }
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header> <!--Final de barra de navegación superior-->
+
+
+
+<main class="container">
+
+    <div id="alerts" class="alert mb-0">
+        <!--Inicio de sección de mensajes y alertas dentro de la app-->
+        <div id="JSAlert"> <!--Contenido generado por Login.js--> </div>
+        @if (TempData["error"] != null)
+        {
+            <span class="alert alert-danger">@TempData["error"]</span>
+        }
+        @if (TempData["success"] != null)
+        {
+            <span class="alert alert-success">@TempData["success"]</span>
+        }
+    </div> <!--Final de sección de mensajes y alertas dentro de la app-->
+
+    <div class="row">
+        <!--Inicio de sección para generar tarjetas de vista previa de pacientes-->
+        @foreach (PatientsOverview patient in Model)
+        {
+            <div class="col-sm-4 mb-3 mb-sm-0">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title">@patient.FirstName @patient.MiddleName @patient.LastName</h4>
+                        @if (patient.Due != 0) //Si el monto a pagar es diferente o mayor a cero, lo mostramos.
+                        {
+                            <h6 class="card-text mb-3">Queda a deber: $@patient.Due</h6>
+                        }
+                        else //Si el monto es de cero o menor, mostramos un aviso de "todo pagado".
+                        {
+                            <h6 class="card-text mb-3"><i class="fa-solid fa-check"></i> Todo pagado</h6>
+                        }
+                    <div class="d-flex flex-wrap gap-1">
+                        <a href="/Home/GetPatientDetails?patientID=@patient.PatientId" class="btn btn-outline-info">Detalles</a> <!--Llaman a otras vistas, pero la edición de los datos de esas vistas será con modales-->
+                        @if (patient.HasMedicalRecord == false) //Si no se ha registrado una historia clínica asociada al paciente, no permite generar pedidos ni verlos (no deberían existir).
+                        {
+                            <a href="/Home/AddMedicalRecord?patientID=@patient.PatientId&patientName=@patient.FirstName&patientLastName=@patient.LastName" class="btn btn-outline-warning me-2">Agregar historia clínica</a>
+                        }
+                        else
+                        {
+                            if (patient.HasOrders == true)
+                            {
+                                <a href="#" class="btn btn-outline-info me-2">Pedidos</a>
+                                <a href="#" class="btn btn-outline-success">Nuevo Pedido </a>
+                            }
+                            else
+                            {
+                                <a href="#" class="btn btn-outline-success">Nuevo Pedido </a>
+                            }
+                        }
+                    </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div> <!--Final de sección para generar tarjetas de vista previa de pacientes-->
+
+    <h2 style="color: white;">Agregar editar detalles con jQuery y AJAX</h2>
+</main>
+<footer>
+    <nav class="navbar fixed-bottom">
+        <div class="container-fluid">
+            @if (ViewBag.IsAdmin != null && ViewBag.IsAdmin == true) //Solo si en el viewbag del usuario loggeado existe el parametro isAdmin como true, se habilita la opción de ingresar a la vista de administrador.
+            {
+                <a class="nav-link active" aria-current="page" href="#">⛧ Vista de Administrador ⛧</a>
+            }
+            <div class="btn btn-danger">
+                <a href="/Login/Logout/">Salir</a>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
+    </nav>
+</footer>
+
+<script src="~/Scripts/Clock.js"></script>

@@ -1,0 +1,30 @@
+﻿/*--------- CSS con estilos para la vista de detalles del paciente ---------*/
+
+/*- Selectores generales -*/
+body {
+    background-color: #15202E;
+}
+
+main {
+    margin-top: 64px;
+    margin-bottom: 38px;
+    height: 100%;
+}
+
+.list-group-item {
+    color: #B8C6CB;
+    background-color: #2D3743;
+}
+
+.list-header {
+    color: black;
+    background-color: #f5ba1a;
+}
+
+#background-modal {
+    background-color: #15202E;
+}
+
+/*.list-body {
+    background-color: #2D3743;
+}*/

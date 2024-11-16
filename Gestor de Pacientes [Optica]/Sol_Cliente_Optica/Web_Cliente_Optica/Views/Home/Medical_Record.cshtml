@@ -1,0 +1,208 @@
+﻿@using Web_Cliente_Optica.Models;
+@{
+    ViewBag.Title = "Medical_Record";
+
+    List<Diopters> dropdownDiopters = ViewBag.DioptersMRList;
+
+    List<Diopters> negativeDiopters = dropdownDiopters.Where(d => d.DiopterValue < 0).OrderBy(d => d.DiopterValue).ToList();
+    List<Diopters> positiveDiopters = dropdownDiopters.Where(d => d.DiopterValue > 0).OrderBy(d => d.DiopterValue).ToList();
+    //List<Diopters> additionDiopters = dropdownDiopters.Where(d => d.DiopterValue >= 1 && d.DiopterValue <= 4).ToList();
+
+    int patientId = ViewBag.Id; //Id del paciente pasado por una ViewBag
+}
+
+<link href="~/CSS/NavbarStyles.css" rel="stylesheet" />
+<link href="~/CSS/CreateStyles.css" rel="stylesheet" />
+<style>
+    .input_field i {
+        margin-top: 22px;
+    }
+</style>
+
+<header class="fixed-top">
+    <!--Inicio de barra de navegación superior-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="d-flex">
+                <a class="navbar-brand btn btn-outline-light" href="/Home/Dashboard">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Regresar
+                </a>
+            </div>
+            <div class="d-flex flex-wrap">
+                <span class="reloj align-content-center">@ViewBag.Patient[0] @ViewBag.Patient[1]</span>
+            </div>
+            <div class="d-flex flex-wrap">
+                <span class="reloj me-3 align-content-center" id="reloj">00:00:00</span>
+                <span class="matriz align-content-center" id="matriz"></span>
+            </div>
+        </div>
+    </nav>
+</header> <!--Final de barra de navegación superior-->
+
+<section>
+    <div class="form_wrapper">
+        <div class="form_container">
+            <div id="null-advertisement"><!--Contenido generado con AddUser.js--></div>
+            <div class="row clearfix">
+                <div class="">
+                    <form id="patient-form" action="/Home/AddMedicalRecord" method="post">
+
+                        <div id="eye-forms">
+                            <div id="left-eye-form">
+                                <!--Inicio del formulario para el ojo izquierdo-->
+                                <div class="title_container">
+                                    <h2>Ojo Izquierdo</h2>
+                                </div>
+                                <input type="hidden" name="IdPatientLeft" value="@patientId" />
+
+                                <div class="input_field ">
+                                    <label>Esfera - Ojo Izquierdo *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <select id="dioptersDropdown" name="IdSphereLeft" required>
+                                        <!-- Agregar los valores negativos -->
+                                        @foreach (var diopter in negativeDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+
+                                        <!--Iniciar con el valor de 0-->
+                                        <option selected value="@dropdownDiopters.First(d => d.DiopterValue == 0).DiopterId">0.0</option>
+
+                                        <!-- Agregar los valores positivos -->
+
+                                        @foreach (var diopter in positiveDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+                                    </select>
+                                </div>
+
+                                <div class="input_field ">
+                                    <label>Cilindro - Ojo Izquierdo *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <select id="dioptersDropdown" name="IdCylinderLeft" required>
+                                        @foreach (var diopter in negativeDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+
+                                        <option selected value="@dropdownDiopters.First(d => d.DiopterValue == 0).DiopterId">0.0</option>
+
+                                        @foreach (var diopter in positiveDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+                                    </select>
+                                </div>
+
+                                <div class="input_field ">
+                                    <label>Eje - Ojo Izquierdo *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <input type="number" name="AxisLeft" placeholder="0" min="0" max="179" required />
+                                </div>
+
+                                <div class="input_field">
+                                    <label>Adición - Ojo Izquierdo *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <select id="dioptersDropdown" name="AdditionLeft" required>
+                                        <option value="0">0.0</option>
+                                        <option value="1">1.0</option>
+                                        <option value="2">2.0</option>
+                                        <option value="3">3.0</option>
+                                        <option value="4">4.0</option>
+                                    </select>
+                                </div>
+                            </div> <!--Final del formulario para el ojo izquierdo-->
+
+                            <div id="right-eye-form">
+                                <!--Inicio del formulario para el ojo derecho-->
+                                <div class="title_container">
+                                    <h2>Ojo Derecho</h2>
+                                </div>
+                                <input type="hidden" name="IdPatientRight" value="@patientId" />
+
+                                <div class="input_field ">
+                                    <label>Esfera - Ojo Derecho *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <select id="dioptersDropdown" name="IdSphereRight" required>
+                                        <!-- Agregar los valores negativos -->
+                                        @foreach (var diopter in negativeDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+
+                                        <!--Iniciar con el valor de 0-->
+                                        <option selected value="@dropdownDiopters.First(d => d.DiopterValue == 0).DiopterId">0.0</option>
+
+                                        <!-- Agregar los valores positivos -->
+
+                                        @foreach (var diopter in positiveDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+                                    </select>
+                                </div>
+
+                                <div class="input_field ">
+                                    <label>Cilindro - Ojo Derecho *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <select id="dioptersDropdown" name="IdCylinderRight" required>
+                                        @foreach (var diopter in negativeDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+
+                                        <option selected value="@dropdownDiopters.First(d => d.DiopterValue == 0).DiopterId">0.0</option>
+
+                                        @foreach (var diopter in positiveDiopters)
+                                        {
+                                            <option value="@diopter.DiopterId">@diopter.DiopterValue</option>
+                                        }
+                                    </select>
+                                </div>
+
+                                <div class="input_field ">
+                                    <label>Eje - Ojo Derecho *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <input type="number" name="AxisRight" placeholder="0" min="0" max="179" required />
+                                </div>
+
+                                <div class="input_field">
+                                    <label>Adición - Ojo Derecho *</label>
+                                    <span><i class="fa-solid fa-eye"></i></span>
+                                    <select id="dioptersDropdown" name="AdditionRight" required>
+                                        <option value="0">0.0</option>
+                                        <option value="1">1.0</option>
+                                        <option value="2">2.0</option>
+                                        <option value="3">3.0</option>
+                                        <option value="4">4.0</option>
+                                    </select>
+                                </div>
+                            </div> <!--Final del formulario para el ojo derecho-->
+                        </div>
+
+                        <input class="button" type="submit" value="Registrar" />
+                    </form>
+                    <div class="title_container">
+                        <span>Los campos marcados con * son obligatorios.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <nav class="navbar fixed-bottom">
+        <div class="container-fluid">
+            <div class="btn btn-danger">
+                <a href="/Login/Logout/">Salir</a>
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </div>
+        </div>
+    </nav>
+</footer>
+
+@*<script src="~/Scripts/AddUser.js"></script>*@
+<script src="~/Scripts/Clock.js"></script>

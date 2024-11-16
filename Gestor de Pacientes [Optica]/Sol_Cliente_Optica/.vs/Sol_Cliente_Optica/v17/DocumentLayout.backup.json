@@ -1,0 +1,118 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|c:\\users\\aleja\\source\\repos\\sol_cliente_optica\\web_cliente_optica\\views\\home\\patientdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\patientdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|c:\\users\\aleja\\source\\repos\\sol_cliente_optica\\web_cliente_optica\\scripts\\patientedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\scripts\\patientedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\web_cliente_optica\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\web_cliente_optica\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\web_cliente_optica\\views\\home\\medical_record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\medical_record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 203,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Medical_Record.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T23:29:50.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAADMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T00:55:58.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAFcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T02:13:31.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAcwCABAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T00:35:25.425Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 197,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientEdit.js",
+              "DocumentMoniker": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\PatientEdit.js",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Scripts\\PatientEdit.js",
+              "ToolTip": "C:\\Users\\Aleja\\source\\repos\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\PatientEdit.js",
+              "RelativeToolTip": "Web_Cliente_Optica\\Scripts\\PatientEdit.js",
+              "ViewState": "AgIAACcAAAAAAAAAAAAgwE0AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-11-13T22:46:39.735Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

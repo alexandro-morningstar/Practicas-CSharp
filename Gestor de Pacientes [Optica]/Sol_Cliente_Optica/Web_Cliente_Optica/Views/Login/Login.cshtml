@@ -1,0 +1,56 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="~/Images/news-icon.ico" />
+    <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/CSS/LoginStyles.css" rel="stylesheet" />
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <div id="alerts"> <!--Inicio de sección de mensajes y alertas para la vista login-->
+        <div id="JSAlert">
+            <!--Contenido generado por Login.js-->
+        </div>
+        @if (TempData["error"] != null)
+        {
+            <span class="alert alert-danger">@TempData["error"]</span>
+        }
+        @if (TempData["failedLogin"] != null)
+        {
+            <script>
+                    swal({
+                        title: "Não não amigão",
+                        text: "@Html.Raw(TempData["failedLogin"])",
+                        type: "error",
+                        confirmButtonText: "Ok"
+                        }, () => { //Hasta depués de la ejecución del swal detonamos la ejecución de la función que llama al método .focus()
+                            let usernameTextBox = document.getElementById("username");
+                            if (usernameTextBox) {
+                                usernameTextBox.focus();
+                            };
+                        });
+            </script>
+        }
+    </div> <!--Final de sección de mensajes y alertas para la vista login-->
+    <div id="login"> <!--Inicio de sección de formulario para inicio de sesión-->
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm" action="/Login/Login" method="post">
+            <input id="username" type="text" name="username" placeholder="Nombre de Usuario*" required />
+            <input id="password" type="password" name="password" placeholder="Contraseña*" required />
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Ingresar</button>
+        </form>
+    </div> <!--Final de sección de formulario para inicio de sesión-->
+    <script src="~/Scripts/Login.js"></script>
+</body>
+</html>

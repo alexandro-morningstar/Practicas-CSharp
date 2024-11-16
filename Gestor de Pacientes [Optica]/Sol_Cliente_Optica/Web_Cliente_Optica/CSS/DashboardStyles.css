@@ -1,0 +1,14 @@
+﻿/*--------- CSS con estilos para la vista de Dashboard ---------*/
+
+body {
+    background-color: #15202E;
+}
+
+.card {
+    border: solid 1px #CCCCCC;
+    color: #B8C6CB;
+    background-color: #2D3743;
+}
+.card h4 {
+    color: aliceblue;
+}

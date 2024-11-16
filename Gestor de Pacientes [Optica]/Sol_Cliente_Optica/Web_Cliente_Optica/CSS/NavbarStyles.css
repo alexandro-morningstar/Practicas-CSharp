@@ -1,0 +1,44 @@
+﻿/*--------- CSS con estilos para las barras de navegación superior ---------*/
+
+/*- Selectores generales -*/
+a {
+    text-decoration: none;
+    color: #F2F2F2;
+}
+
+nav i {
+    color: #F2F2F2;
+}
+
+/*- Selectores de clase -*/
+.navbar {
+    color: #F2F2F2;
+    background-color: #2C303A;
+}
+
+.navbar-brand {
+    color: #F2F2F2;
+}
+
+.reloj {
+    font-size: 2em;
+}
+
+.matriz {
+    display: grid;
+    grid-template-columns: repeat(6, 10px);
+    grid-template-rows: repeat(3, 10px);
+    gap: 5px;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+}
+
+    .punto.active {
+        background-color: green;
+    }
