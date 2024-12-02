@@ -405,6 +405,37 @@ namespace Data_Users
             }
         }
 
+        public void PatientEdit(Patients patient)
+        {
+            try
+            {
+                using (SqlConnection sqlEditConnection = new SqlConnection(app_connection))
+                {
+                    sqlEditConnection.Open();
+
+                    using (SqlCommand editCommand = new SqlCommand("Patient_Edit", sqlEditConnection))
+                    {
+                        editCommand.CommandType = CommandType.StoredProcedure;
+
+                        editCommand.Parameters.AddWithValue("@patientid", patient.PatientId);
+                        editCommand.Parameters.AddWithValue("@firstname", patient.FirstName);
+                        editCommand.Parameters.AddWithValue("@middlename", patient.MiddleName);
+                        editCommand.Parameters.AddWithValue("@lastname", patient.LastName);
+                        editCommand.Parameters.AddWithValue("@age", patient.Age);
+                        editCommand.Parameters.AddWithValue("@idgender", patient.IdGender);
+                        editCommand.Parameters.AddWithValue("@anotherdiseases", patient.AnotherDiseases);
+                        editCommand.Parameters.AddWithValue("@contactnumber", patient.ContactNumber);
+
+                        editCommand.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         /// <summary>
         /// Retorna una lista con todas los objetos/registros Disease encontrados en la base de datos.

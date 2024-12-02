@@ -61,6 +61,34 @@ namespace Business_Users
             }
         }
 
+        public void B_PatientEdit(Patients patient)
+        {
+            //Campos null convertir a strings vacios
+            if (patient.MiddleName == null)
+            {
+                patient.MiddleName = "";
+            }
+
+            if (patient.AnotherDiseases == null)
+            {
+                patient.AnotherDiseases = "";
+            }
+
+            if (patient.ContactNumber == null)
+            {
+                patient.ContactNumber = "S/N";
+            }
+
+            //Trimmear strings para evitar espacios al inicio y final.
+            patient.FirstName.Trim();
+            patient.MiddleName.Trim();
+            patient.LastName.Trim();
+
+            Convert.ToString(patient.ContactNumber); //Convertir campos a string
+
+            dataAppTools.PatientEdit(patient);
+        }
+
         /// <summary>
         /// Desempaqueta el objeto de tipo MedicalRecord en dos objetos del tipo LeftEyesRx y RightEyesRx
         /// para enviarselo al método correspondiente en la capa de datos y generar los registros.

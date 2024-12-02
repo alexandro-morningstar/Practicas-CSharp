@@ -77,32 +77,33 @@
                         {
                             <h6 class="card-text mb-3"><i class="fa-solid fa-check"></i> Todo pagado</h6>
                         }
-                    <div class="d-flex flex-wrap gap-1">
-                        <a href="/Home/GetPatientDetails?patientID=@patient.PatientId" class="btn btn-outline-info">Detalles</a> <!--Llaman a otras vistas, pero la edición de los datos de esas vistas será con modales-->
-                        @if (patient.HasMedicalRecord == false) //Si no se ha registrado una historia clínica asociada al paciente, no permite generar pedidos ni verlos (no deberían existir).
-                        {
-                            <a href="/Home/AddMedicalRecord?patientID=@patient.PatientId&patientName=@patient.FirstName&patientLastName=@patient.LastName" class="btn btn-outline-warning me-2">Agregar historia clínica</a>
-                        }
-                        else
-                        {
-                            if (patient.HasOrders == true)
+                        <div class="d-flex flex-wrap gap-1">
+                            <a href="/Home/GetPatientDetails?patientID=@patient.PatientId" class="btn btn-outline-info">Detalles</a> <!--Llaman a otras vistas, pero la edición de los datos de esas vistas será con modales-->
+                            @if (patient.HasMedicalRecord == false) //Si no se ha registrado una historia clínica asociada al paciente, no permite generar pedidos ni verlos (no deberían existir).
                             {
-                                <a href="#" class="btn btn-outline-info me-2">Pedidos</a>
-                                <a href="#" class="btn btn-outline-success">Nuevo Pedido </a>
+                                <a href="/Home/AddMedicalRecord?patientID=@patient.PatientId&patientName=@patient.FirstName&patientLastName=@patient.LastName" class="btn btn-outline-warning me-2">Agregar historia clínica</a>
                             }
                             else
                             {
-                                <a href="#" class="btn btn-outline-success">Nuevo Pedido </a>
+                                if (patient.HasOrders == true)
+                                {
+                                    <a href="#" class="btn btn-outline-info me-2">Pedidos</a>
+                                    <a href="#" class="btn btn-outline-success">Nuevo Pedido </a>
+                                }
+                                else
+                                {
+                                    <a href="#" class="btn btn-outline-success">Nuevo Pedido </a>
+                                }
                             }
-                        }
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
         }
     </div> <!--Final de sección para generar tarjetas de vista previa de pacientes-->
 
-    <h2 style="color: white;">Agregar editar detalles con jQuery y AJAX</h2>
+    <h2 style="color: white;">Editar padecimientos: Obtener lista de ids de padecimientos asociados a un paciente, traer todos los padecimientos de nuevo</h2>
+    <h2 style="color: white;">Agregar padecimientos despues de crear un paciente: Traer todos los padecimientos ¿repetir el bloque de AddUser.js??</h2>
 </main>
 <footer>
     <nav class="navbar fixed-bottom">

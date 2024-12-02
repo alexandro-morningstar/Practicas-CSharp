@@ -159,6 +159,34 @@ namespace Web_Cliente_Optica.Controllers
         }
 
         [HttpGet]
+        public JsonResult GetJsonDiseases()
+        {
+            List<Diseases> allDiseases = new List<Diseases>();
+            try
+            {
+                using (HttpClient getDiseasesConnection = new HttpClient())
+                {
+                    getDiseasesConnection.BaseAddress = new Uri("http://localhost:54263");
+                    var diseasesRequest = getDiseasesConnection.GetAsync("api/Values/GetDiseases").Result;
+
+                    if (diseasesRequest.IsSuccessStatusCode)
+                    {
+                        string diseasesResultString = diseasesRequest.Content.ReadAsStringAsync().Result;
+                        allDiseases = JsonConvert.DeserializeObject<List<Diseases>>(diseasesResultString);
+
+                        return Json(new { status = "ok", alldiseases = allDiseases }, JsonRequestBehavior.AllowGet);
+                    }
+                    else { throw new Exception("Error en la conexión al servicio REST"); }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                return Json(new { status = ex.Message }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
+        [HttpGet]
         public ActionResult AddMedicalRecord(int patientID, string patientName, string patientLastName)
         {
             if (Session["currentUser"] == null)
@@ -268,11 +296,24 @@ namespace Web_Cliente_Optica.Controllers
         }
 
         [HttpPost]
-        public JsonResult EditPatient(Patients patient)
+        public JsonResult PatientEdit(Patients patient)
         {
             try
             {
-                return Json(new { status = "ok", id = patient.PatientId }, JsonRequestBehavior.AllowGet);
+                using (HttpClient patientEditConnection = new HttpClient())
+                {
+                    patientEditConnection.BaseAddress = new Uri("http://localhost:54263");
+                    var patientEditRequest = patientEditConnection.PostAsJsonAsync("api/Values/PatientEdit", patient).Result;
+
+                    if (patientEditRequest.IsSuccessStatusCode)
+                    {
+                        return Json(new { status = "ok", id = patient.PatientId }, JsonRequestBehavior.AllowGet);
+                    }
+                    else
+                    {
+                        throw new Exception("Error en la conexión al servicio REST");
+                    }
+                }
             }
             catch (Exception ex)
             {

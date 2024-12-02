@@ -146,6 +146,20 @@ namespace API_REST_Optica.Controllers
             }
         }
 
+        [HttpPost]
+        [Route("api/Values/PatientEdit")]
+        public void PatientEdit(Patients patient)
+        {
+            try
+            {
+                businessAppInTools.B_PatientEdit(patient);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         [HttpGet]
         [Route("api/Values/GetPatientDetails")]
         public PatientDetails GetPatientDetails(int patientID)
@@ -160,6 +174,7 @@ namespace API_REST_Optica.Controllers
                 throw ex;
             }
         }
+
 
         //[HttpPost]
         //[Route("api/Values/AddPatientDisease")]

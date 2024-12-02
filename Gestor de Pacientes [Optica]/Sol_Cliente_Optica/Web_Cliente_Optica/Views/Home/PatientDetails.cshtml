@@ -1,6 +1,7 @@
 ﻿@using Web_Cliente_Optica.Models;
 @using Newtonsoft.Json;
 @model PatientDetails
+
 @{
     ViewBag.Title = "PatientDetails";
 }
@@ -57,7 +58,8 @@
                             </div>
                             <div class="row clearfix">
                                 <div class="">
-                                    <form id="patient-form"> @*action="/Home/AddUser/"*@
+                                    <form id="patient-form">
+                                        @*action="/Home/AddUser/"*@
                                         <input id="PatientId" type="hidden" name="PatientId" value="" />
                                         <div class="input_field">
                                             <span><i class="fa-solid fa-person-half-dress"></i></span>
@@ -65,11 +67,11 @@
                                         </div>
                                         <div class="input_field">
                                             <span><i class="fa-solid fa-person-half-dress"></i></span>
-                                            <input id="MiddleName" type="text" name="MiddleName" placeholder="Segundo Nombre" value=""/>
+                                            <input id="MiddleName" type="text" name="MiddleName" placeholder="Segundo Nombre" value="" />
                                         </div>
                                         <div class="input_field">
                                             <span><i class="fa-solid fa-person-half-dress"></i></span>
-                                            <input id="LastName" type="text" name="LastName" value="" placeholder="Apellido(s) *" required  />
+                                            <input id="LastName" type="text" name="LastName" value="" placeholder="Apellido(s) *" required />
                                         </div>
                                         <div class="input_field">
                                             <span><i class="fa-solid fa-phone"></i></span>
@@ -105,6 +107,55 @@
     </div>
 
     <!--Final: Tabla modal para editar paciente-->
+    <!--Inicio: Tabla modal para editar padecimientos-->
+    <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="patient-diseases-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModelLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="background-modal">
+                <div class="modal-header">
+                    <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" id="cancelButton">
+                        <span aria-hidden="true">
+                            <i style="color: #DC3545;" class="fa-regular fa-circle-xmark"></i>
+                        </span>
+                        <span>
+                            Cancelar
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form_wrapper">
+                        <div class="form_container">
+                            <div id="null-advertisement"><!--Contenido generado con AddUser.js--></div>
+                            <div class="title_container">
+                                <h2>Formulario de edición</h2>
+                            </div>
+                            <div class="row clearfix">
+                                <div class="">
+                                    <form id="patient-form">
+                                        <input id="PatientId" type="hidden" name="PatientId" value="" />
+                                        <div class="input_field select_option">
+                                            <select id="diseaseDropdown">
+                                                @*<option disabled selected>Padecimientos</option>*@
+                                                <!--Opciones generadas con PatientEdit.js - fillDropdownForm-->
+                                            </select>
+                                        </div>
+                                        <div class="input_field" id="temporal-diseases">
+                                            <!--Contenido generado con AddUser.js
+                                            Aquí se insertarán los padecimientos que se seleccionen del DropDownList
+                                            La creación de los registros de padecimientos de un paciente deben generarse después de crearse el paciente para tener un ID al cual relacionarlas-->
+                                        </div>
+                                        <input id="idsArray" type="hidden" name="listOfDiseases" value="" />
+                                        <input id="editButton" class="button" type="submit" value="Confirmar Cambios" />
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Final: Tabla modal para editar padecimientos-->
     <!--Inicio: sección tablas de detalle de paciente y graduación-->
     <div id="details-container" class="row align-items-center">
         <!--Inicio: tabla de paciente-->
@@ -119,22 +170,27 @@
                 <li class="list-group-item">Apellido(s): @Model.Patient.LastName</li>
                 <li class="list-group-item">Edad: @Model.Patient.Age</li>
                 <li class="list-group-item">Genero: @Model.Patient.Gender.Gender</li>
+                <li class="list-group-item">Teléfono: @Model.Patient.ContactNumber</li>
                 @if (Model.Patient.ContactNumber != "S/N")
                 {
                     <li class="list-group-item">Numero de contacto: @Model.Patient.ContactNumber</li>
                 }
                 <li class="list-group-item">Fecha de registro: @Model.Patient.RegistryDate.ToString("dddd dd/MMMM/yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("es-MX"))</li>
-                @foreach (var disease in Model.Diseases)
-                {
-                    <li class="list-group-item">Padecimientos: @disease.Disease</li>
-                }
                 @if (Model.Patient.AnotherDiseases != "")
                 {
                     <li class="list-group-item">Otros padecimientos: @Model.Patient.AnotherDiseases</li>
                 }
-            <li class="list-group-item"> <!--Esto debería llamar a la función getPatientButton de PatientEdit.js -->
-                <a class="btn btn-outline-warning" data-patient='@Html.Raw(JsonConvert.SerializeObject(Model.Patient))' onclick="return getPatientButton(this)">Editar Información</a>  <!--Enviamos el objeto de pacientes en formato JSON como parametro-->
-            </li>
+                <li class="list-group-item">
+                    <!--Esto debería llamar a la función getPatientButton de PatientEdit.js -->
+                    <a class="btn btn-outline-warning" data-patient='@Html.Raw(JsonConvert.SerializeObject(Model.Patient))' onclick="return getPatientButton(this)">Editar Información</a>  <!--Enviamos el objeto de pacientes en formato JSON como parametro-->
+                </li>
+                @if (Model.Diseases.Count() == 0)
+                {
+                    <li class="list-group-item">
+                        <!--Esto debería llamar a la función getDiseases de PatientEdit.js para agregar padecimientos-->
+                        <a class="btn btn-outline-secondary" data-patient='@Html.Raw(JsonConvert.SerializeObject(Model.Patient))' onclick="return getDiseases(this)">Agregar Padecimientos</a>  <!--Enviamos el objeto de pacientes en formato JSON como parametro-->
+                    </li>
+                }
             </ul>
         </div>
         <!--Final: tabla de paciente-->
@@ -165,9 +221,38 @@
                 }
             </ul>
         </div>
-        <!--Final: Tabla de ojo derecho-->
     </div>
+    <!--Final: Tabla de ojo derecho-->
+    <!--Inicio: Tabla de padecimientos del paciente-->
+    @if (Model.Diseases.Count() != 0)
+    {
+        <div id="current-diseases" class="col">
+            <ul class="list-group">
+                <li class="list-group-item list-header" aria-current="true">Padecimientos</li>
+                @foreach (Diseases disease in Model.Diseases)
+                {
+                    <li class="list-group-item" id="@disease.DiseaseId">@disease.Disease</li>
+                }
+
+                <li class="list-group-item">
+                    <!--Esto debería llamar a la función getCurrentDiseasesButton de PatientEdit.js -->
+                    <a class="btn btn-outline-warning" data-diseases='@Html.Raw(JsonConvert.SerializeObject(Model.Diseases))' onclick="return getCurrentDiseasesButton(this)">Editar Padecimientos</a>  <!--Deberíamos enviar la misma lista de IDs de los padecimientos ¿generar la lista al llamar los detalles del paciente? int[] armada desde business con patientdetails como atributo?-->
+                </li>
+            </ul>
+        </div>
+    }
+    <!--Final: Tabla de padecimientos del paciente-->
     <!--Final: sección tablas de detalle de paciente y graduación-->
+    <!--Inicio: Sección de ids de padecimientos-->
+    @*@foreach (Diseases disease in Model.Diseases)
+        {
+            <input type="hidden" value="@disease.DiseaseId"/>
+        }*@
+    <!--Final: Sección de ids de padecimientos-->
+
+
+
+
 </main>
 
 <footer>

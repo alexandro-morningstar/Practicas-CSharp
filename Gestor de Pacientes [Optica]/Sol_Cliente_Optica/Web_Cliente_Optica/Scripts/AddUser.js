@@ -17,7 +17,7 @@ function init() {
 
     /*--------------- Funciones llamadas de eventos ---------------*/
 
-    /*--------- Submit Form Paciente ---------*/
+    /*--------- Evento Submit Form Paciente ---------*/
     jQuery("#patient-form").on("submit", function (event) {
 
         event.preventDefault();
@@ -73,7 +73,7 @@ function init() {
             selectedDiseases.push(diseaseId); //Agregamos el ID de la opción al array
 
             jQuery("#temporal-diseases").append( //Agregar la opción a la lista en pantalla
-                `<li data-id="${diseaseId}">${diseaseName} <button onclick="removeDisease(${diseaseId})">Eliminar</button></li>` //EDITAR ESTO PARA PERSONALIZAR Y SABER COMO MANEJARLO
+                `<li data-id="${diseaseId}">${diseaseName} <button onclick="removeDisease(${diseaseId})">Eliminar</button></li>`
             );
             
             selectedOption.prop('disabled', true); //Deshabilitamos la opción seleccionada dentro del dropdown

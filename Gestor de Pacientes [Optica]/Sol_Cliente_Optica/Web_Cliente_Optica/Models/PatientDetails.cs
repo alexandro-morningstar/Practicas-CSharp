@@ -8,5 +8,6 @@ namespace Web_Cliente_Optica.Models
         public List<Diseases> Diseases { get; set; }
         public LeftEyesRx LeftEyeRx { get; set; }
         public RightEyesRx RightEyeRx { get; set; }
+        
     }
 }
