@@ -7,8 +7,16 @@
  *| ___________________________________________________________________________________|
  */
 
+// --------------- Variables globales ---------------
+var previousDiseases = []; //Contiene una lista con los IDs de los padecimientos anteriores.
+var newDiseases = []; //Contiene una lista con los IDs de los nuevos padecimientos.
+// ---- ¿¿selectedDiseases se actualiza desde si mismo en el parámetro de la función fillDropdownForm?? ----
+
 // --------------- Definición y llamada de funciones ---------------
 function fillDropdownForm(selectedDiseases, allDiseases) {
+    previousDiseases = selectedDiseases; //Este llenado solo ocurre al llenar el Dropdown, por lo que no debería alterarase con el comportamiento de selectedDiseases
+    //console.log("selectedDiseases desde fillDropdownForm", selectedDiseases);
+    //console.log("allDiseases desde fillDropdownForm", allDiseases);
     /*--------- Llenar DropdownList ---------*/
     let options = `<option disabled selected>Padecimientos</option>`;
     jQuery.each(allDiseases, function (i, element) {
@@ -20,17 +28,23 @@ function fillDropdownForm(selectedDiseases, allDiseases) {
     jQuery("#diseaseDropdown").empty(); //Limpiamos por si acaso
     jQuery("#diseaseDropdown").html(options); //Insertamos el HTML en el elemento.
 
+    //for (let clave in allDiseases) {
+    //    console.log(`Padecimiento: ${allDiseases[clave]["DiseaseId"]}`);
+    //    console.log(`Padecimiento: ${allDiseases[clave]["Disease"]}`);
+    //};
+
     /*--------- Generar las opciones actuales ---------*/
-    for (const selectedDisease of selectedDiseases) {
-        jQuery("#temporal-diseases").append(
-            `<li data-id="${selectedDisease.DiseaseId}"> VER COMO INSERTAR AQUI EL NOMBRE DEL PADECIMIENTO <button onclick="removeDisease(${selectedDisease.DiseaseId})">Eliminar</button></li>`
-        );
+    for (let disease in allDiseases) {
+        if (selectedDiseases.includes(allDiseases[disease]["DiseaseId"])) {
+            jQuery("#temporal-diseases").append(
+                `<li data-id="${allDiseases[disease]["DiseaseId"]}"> ${allDiseases[disease]["Disease"]} <button onclick="removeDisease(${allDiseases[disease]["DiseaseId"]})">Eliminar</button></li>`
+            );
+            $("#diseaseDropdown").find(`option[value="${allDiseases[disease]["DiseaseId"]}"]`).prop('disabled', true); //Deshabilitar opciones ya seleccionadas (traidas del paciente)
+        };
     };
 
-    // --------------------------- AQUI NOS QUEDAMOS----------------------------------
-    
-
     /*--------- DropdownList Diseases Behavior ---------*/
+    jQuery("#diseaseDropdown").off("change"); //Eliminar manejadores existentes para evitar duplicados al abrir y cerrar el modal sin registrar cambios.
     jQuery("#diseaseDropdown").on("change", function () {
         let selectedOption = jQuery(this).find("option:selected"); //Buscamos la información/referenciamos de la opción selecionada.
         let diseaseId = selectedOption.val(); //Almacenamos el ID de la opción seleccionada.
@@ -38,13 +52,17 @@ function fillDropdownForm(selectedDiseases, allDiseases) {
 
         if (!selectedDiseases.includes(diseaseId)) { //Si la opción no ha sido seleccionada ya (si no existe en la actual lista de selectedDiseases), la agregamos.
 
-            selectedDiseases.push(diseaseId); //Agregamos el ID de la opción a la lista.
+            selectedDiseases.push(Number(diseaseId)); //Agregamos el ID de la opción a la lista.
+            newDiseases = [...selectedDiseases]; //Actualiza (reemplaza) el contenido de newDiseases con la versión más nueva de selectedDiseases.
 
             jQuery("#temporal-diseases").append(
                 `<li data-id="${diseaseId}">${diseaseName} <button onclick="removeDisease(${diseaseId})">Eliminar</button></li>`
             );
 
             selectedOption.prop('disabled', true); //Deshabilitamos la opción seleccionada dentro del dropdown.
+
+            console.log("Padecimientos nuevos", newDiseases);
+            console.log("Padecimientos previos", previousDiseases);
         };
 
         jQuery(this).val('Padecimientos (opcional)'); //Asigna el texto de la opción actual.
@@ -52,9 +70,13 @@ function fillDropdownForm(selectedDiseases, allDiseases) {
 
     /*--------------- Llamada Onclick para remover un elemento de la lista en pantalla de padecimientos. ---------------*/
     window.removeDisease = function (diseaseId) {
-        selectedDiseases = selectedDiseases.filter(id => id !== diseaseId.toString()); //Remueve la enfermedad del array de seleccionados (el array almacena strings, hay que convertir el id primero).
+        selectedDiseases = selectedDiseases.filter(id => id !== Number(diseaseId)); //Remueve la enfermedad del array de seleccionados (el array almacena strings, hay que convertir el id primero).
+        newDiseases = [...selectedDiseases]; //Actualiza (reemplaza) el contenido de newDiseases con la versión más nueva de selectedDiseases.
+
         jQuery(`#temporal-diseases li[data-id='${diseaseId}']`).remove(); //Remueve el elemento de la lista en pantalla
         jQuery(`#diseaseDropdown option[value='${diseaseId}']`).prop('disabled', false); //Habilita de nuevo la opción en el DropdownList
+
+        console.log(newDiseases);
     };
 };
 
@@ -73,7 +95,6 @@ function cancel() {
 };
 
 function edit() {
-
     //Armar el objeto de paciente en formato JSON
     let patient = {
         PatientId: jQuery("#PatientId").val(),
@@ -120,13 +141,44 @@ function edit() {
     });
 };
 
+function editDiseases() {
+    //Armar objeto con dos listas de IDs: "padecimientos anteriores" y "padecimientos nuevos"
+    console.log(`Estos son los padecimientos anteriores: ${previousDiseases}`);
+    console.log(`Estos son los nuevos padecimientos: ${newDiseases}`);
+
+    // @@@@@@@@@ AQUI NOS QUEDAMOS: AGREGAR METODO PARA REALIZAR EL SUBMIR AHORA SI CON AMBAS LISTAS YA BIEN MANEJADAS @@@@@@@@@@@@@@@@@@@@@@
+};
+
+function editDiseasesCancel() {
+    //Limpiar campos (Dropdown y elementos li)
+    jQuery("#diseaseDropdown").empty();
+    jQuery("#temporal-diseases").empty();
+    var previousDiseases = [];
+    var newDiseases = [];
+
+    //Ocultar Modal
+    jQuery("#patient-diseases-modal").modal("toggle");
+};
+
 // --------------- Eventos de click ---------------
 jQuery("#cancelButton").click( () => {
     cancel();
 });
 
-jQuery("#editButton").click(() => {
+jQuery("#editButton").click( () => {
     edit();
+});
+
+jQuery("#editDiseasesCancelButton").click( () => {
+    editDiseasesCancel();
+});
+
+jQuery("#editDiseasesButton").click( () => {
+    editDiseases();
+
+    //console.log(`Estos son los padecimientos anteriores: ${previousDiseases}`);
+    //console.log(`Estos son los nuevos padecimientos: ${newDiseases}`);
+    /*jQuery("#patient-diseases-modal").modal("toggle");*/
 });
 
 // --------------- Onclick directo de elemento html ---------------
@@ -169,6 +221,12 @@ function getCurrentDiseasesButton(diseasesObject) {
     */
     var selectedDiseases = currentDiseases.map(d => d.DiseaseId);
 
+    //Limpiar campos (Dropdown y elementos li)
+    jQuery("#diseaseDropdown").empty();
+    jQuery("#temporal-diseases").empty();
+    var previousDiseases = [];
+    var newDiseases = [];
+
     /*--------- Llenar DropdownList ---------*/
     jQuery.ajax({
         type: "Get",
@@ -185,11 +243,6 @@ function getCurrentDiseasesButton(diseasesObject) {
             window.alert(`Ocurrió un error inesperado: ${objXMLHttpRequest}`);
         }
     });
-
-    /*--------- DropdownList Diseases ---------*/
-    // Especificar que los campos estarán habilitados.
-    // Setear información en el campo correspondiente. (Agregar opciones de dropdown?)
-
 
     // Mostrar el modal.
     jQuery("#patient-diseases-modal").modal("show");

@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_cliente_optica\\web_cliente_optica\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_cliente_optica\\web_cliente_optica\\scripts\\patientedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\scripts\\patientedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_cliente_optica\\web_cliente_optica\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|c:\\users\\aleja\\workspace\\ejercicios completos\\c#\\gestor de pacientes [optica]\\sol_cliente_optica\\web_cliente_optica\\views\\home\\patientdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\patientdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\scripts\\adduser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\scripts\\adduser.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\scripts\\patientedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\scripts\\patientedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\views\\home\\patientdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\patientdetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\views\\home\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\models\\patientdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\models\\patientdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\scripts\\diseasesedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|solutionrelative:web_cliente_optica\\scripts\\diseasesedit.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{641AEAC1-3310-476E-9530-EFD10741C68F}|Web_Cliente_Optica\\Web_Cliente_Optica.csproj|C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\web_cliente_optica\\views\\home\\medical_record.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -45,8 +41,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 204,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 174,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -74,6 +70,55 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Web_Cliente_Optica\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAJUAAAAAAAAAAAAAwLIAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-11T00:35:25.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAE8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-10-16T00:55:58.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Medical_Record.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-02T23:29:50.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PatientDetails.cshtml",
+              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAIwH8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-05T02:13:31.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
               "Title": "PatientDetails.cs",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Models\\PatientDetails.cs",
@@ -86,74 +131,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Web_Cliente_Optica\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAJUAAAAAAAAAAAAAwKEAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-11T00:35:25.425Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
-              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
-              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Create.cshtml",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAE8AAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-16T00:55:58.945Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Medical_Record.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
-              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
-              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Medical_Record.cshtml",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAACoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-02T23:29:50.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PatientDetails.cshtml",
-              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
-              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
-              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
-              "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\PatientDetails.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-05T02:13:31.544Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AddUser.js",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\AddUser.js",
               "RelativeDocumentMoniker": "Web_Cliente_Optica\\Scripts\\AddUser.js",
               "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\AddUser.js",
               "RelativeToolTip": "Web_Cliente_Optica\\Scripts\\AddUser.js",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwEoAAABQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-22T03:49:31.238Z"
+              "WhenOpened": "2024-11-22T03:49:31.238Z",
+              "EditorCaption": ""
             }
           ]
         },
         {
-          "DockedWidth": 196,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 226,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Dashboard.cshtml",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Views\\Home\\Dashboard.cshtml",
               "RelativeDocumentMoniker": "Web_Cliente_Optica\\Views\\Home\\Dashboard.cshtml",
@@ -161,32 +158,20 @@
               "RelativeToolTip": "Web_Cliente_Optica\\Views\\Home\\Dashboard.cshtml",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAGkAAACSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-18T02:08:19.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T02:08:19.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DiseasesEdit.js",
-              "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\DiseasesEdit.js",
-              "RelativeDocumentMoniker": "Web_Cliente_Optica\\Scripts\\DiseasesEdit.js",
-              "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\DiseasesEdit.js",
-              "RelativeToolTip": "Web_Cliente_Optica\\Scripts\\DiseasesEdit.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-18T02:08:06.835Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "PatientEdit.js",
               "DocumentMoniker": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\PatientEdit.js",
               "RelativeDocumentMoniker": "Web_Cliente_Optica\\Scripts\\PatientEdit.js",
               "ToolTip": "C:\\Users\\Aleja\\Workspace\\Ejercicios Completos\\C#\\Gestor de Pacientes [Optica]\\Sol_Cliente_Optica\\Web_Cliente_Optica\\Scripts\\PatientEdit.js",
               "RelativeToolTip": "Web_Cliente_Optica\\Scripts\\PatientEdit.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowF0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-11-13T22:46:39.735Z"
+              "WhenOpened": "2024-11-13T22:46:39.735Z",
+              "EditorCaption": ""
             }
           ]
         }

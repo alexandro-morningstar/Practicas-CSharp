@@ -112,7 +112,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content" id="background-modal">
                 <div class="modal-header">
-                    <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" id="cancelButton">
+                    <button type="button" class="close btn btn-outline-danger" data-dismiss="modal" id="editDiseasesCancelButton">
                         <span aria-hidden="true">
                             <i style="color: #DC3545;" class="fa-regular fa-circle-xmark"></i>
                         </span>
@@ -130,7 +130,8 @@
                             </div>
                             <div class="row clearfix">
                                 <div class="">
-                                    <form id="patient-form">
+                                    <form id="patient-form" onsubmit="return false;">
+                                    @*<form id="patient-form">*@
                                         <input id="PatientId" type="hidden" name="PatientId" value="" />
                                         <div class="input_field select_option">
                                             <select id="diseaseDropdown">
@@ -143,8 +144,8 @@
                                             Aquí se insertarán los padecimientos que se seleccionen del DropDownList
                                             La creación de los registros de padecimientos de un paciente deben generarse después de crearse el paciente para tener un ID al cual relacionarlas-->
                                         </div>
-                                        <input id="idsArray" type="hidden" name="listOfDiseases" value="" />
-                                        <input id="editButton" class="button" type="submit" value="Confirmar Cambios" />
+                                        @*<input id="idsArray" type="hidden" name="listOfDiseases" value="" />*@
+                                        <input id="editDiseasesButton" class="button" type="submit" value="Confirmar Cambios" />
                                     </form>
                                 </div>
                             </div>
