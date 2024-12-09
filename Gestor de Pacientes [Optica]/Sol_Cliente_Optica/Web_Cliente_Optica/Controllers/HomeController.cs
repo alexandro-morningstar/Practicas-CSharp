@@ -321,6 +321,32 @@ namespace Web_Cliente_Optica.Controllers
             }
         }
 
+        [HttpPost]
+        public JsonResult DiseasesUpdate(string update, int patientId)
+        {
+            try
+            {
+                using (HttpClient diseasesUpdateConnection = new HttpClient())
+                {
+                    diseasesUpdateConnection.BaseAddress = new Uri("http://localhost:54263");
+                    var diseasesUpdateRequest = diseasesUpdateConnection.PostAsJsonAsync("api/Values/DiseasesUpdate", update).Result;
+
+                    if (diseasesUpdateRequest.IsSuccessStatusCode)
+                    {
+                        return Json(new { status = "ok", id = patientId }, JsonRequestBehavior.AllowGet);
+                    }
+                    else
+                    {
+                        throw new Exception("Error en la conexión al servicio REST");
+                    } // AQUI NOS QUEDAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOSSSS
+                }
+            }
+            catch (Exception ex)
+            {
+                return Json(new { status = ex.Message }, JsonRequestBehavior.AllowGet);
+            }
+        }
+
         [HttpGet]
         public ActionResult GetPatientDetails(int patientID)
         {

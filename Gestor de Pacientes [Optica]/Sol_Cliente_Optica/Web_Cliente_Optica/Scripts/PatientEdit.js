@@ -142,11 +142,45 @@ function edit() {
 };
 
 function editDiseases() {
+    //Generar una variable con el id del usuario actual
+    let id = jQuery("#currentPatientId").val();
+
     //Armar objeto con dos listas de IDs: "padecimientos anteriores" y "padecimientos nuevos"
     console.log(`Estos son los padecimientos anteriores: ${previousDiseases}`);
     console.log(`Estos son los nuevos padecimientos: ${newDiseases}`);
+    let diseasesUpdate = {
+        previous: previousDiseases,
+        new: newDiseases
+    };
 
-    // @@@@@@@@@ AQUI NOS QUEDAMOS: AGREGAR METODO PARA REALIZAR EL SUBMIR AHORA SI CON AMBAS LISTAS YA BIEN MANEJADAS @@@@@@@@@@@@@@@@@@@@@@
+    jQuery.ajax({
+        type: "post",
+        url: "/Home/DiseasesUpdate",
+        contentType: "application/json; charset=utf-8",
+        dataType: "JSON",
+        data: JSON.stringify(diseasesUpdate),
+        success: function (response) {
+            if (response.status = "ok") {
+                window.alert("Se ejecutó correctamente el método.");
+
+                //Limpiar Modal
+                jQuery("#diseaseDropdown").empty();
+                jQuery("#temporal-diseases").empty();
+                var previousDiseases = [];
+                var newDiseases = [];
+
+                //Ocultar Modal
+                jQuery("#patient-diseases-modal").modal("toggle");
+
+                //Recargar la página para volver a solicitar los datos del paciente (ya actualizados)
+            } else {
+                window.alert(response.status);
+            };
+        },
+        error: function (objXMLHttpRequest) {
+            window.alert(`Algo salió mal!: ${objXMLHttpRequest}`);
+        }
+    }); // REFERENCIA DE DONDE NOS QUEDAMOS DEL LADO DEL FRONT
 };
 
 function editDiseasesCancel() {
