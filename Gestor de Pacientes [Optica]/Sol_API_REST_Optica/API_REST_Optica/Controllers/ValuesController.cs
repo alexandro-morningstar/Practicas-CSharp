@@ -175,13 +175,27 @@ namespace API_REST_Optica.Controllers
             }
         }
 
+
         [HttpPost]
         [Route("api/Values/DiseasesUpdate")]
-        public void DiseasesUpdate(string update, int patientId)
+        public void DiseasesUpdate(DiseasesUpdate update, int patientId)
         {
-            Ok();
+            try
+            {
+                businessAppInTools.B_PatientDiseasesUpdate(update, patientId);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
+        /*
+        public IHttpActionResult DiseasesUpdate(DiseasesUpdate update, int patientId)
+        {
+            return Ok();
+        }
+        */
 
         //[HttpPost]
         //[Route("api/Values/AddPatientDisease")]

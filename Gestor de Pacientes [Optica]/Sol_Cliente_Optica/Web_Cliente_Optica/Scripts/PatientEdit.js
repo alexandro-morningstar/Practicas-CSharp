@@ -114,7 +114,7 @@ function edit() {
         dataType: "JSON",
         data: JSON.stringify(patient), //Convertir el objeto patient a string.
         success: function (response) {
-            if (response.status = "ok") {
+            if (response.status == "ok") {
                 window.alert("Por fin sirvió esta MIERDA");
                 //Limpiar campos
                 jQuery("#PatientId").val("");
@@ -141,6 +141,8 @@ function edit() {
     });
 };
 
+
+// %%%%%%%%%% CORREGIR ESTO DESPUES DE CORREGIR edit() %%%%%%%%%%%%%
 function editDiseases() {
     //Generar una variable con el id del usuario actual
     let id = jQuery("#currentPatientId").val();
@@ -148,19 +150,21 @@ function editDiseases() {
     //Armar objeto con dos listas de IDs: "padecimientos anteriores" y "padecimientos nuevos"
     console.log(`Estos son los padecimientos anteriores: ${previousDiseases}`);
     console.log(`Estos son los nuevos padecimientos: ${newDiseases}`);
-    let diseasesUpdate = {
+    let update = {
         previous: previousDiseases,
-        new: newDiseases
+        current: newDiseases
     };
+
+    console.log(`Este es el objeto update: ${update}`)
 
     jQuery.ajax({
         type: "post",
-        url: "/Home/DiseasesUpdate",
+        url: `/Home/DiseasesUpdate?patientId=${id}`,
         contentType: "application/json; charset=utf-8",
         dataType: "JSON",
-        data: JSON.stringify(diseasesUpdate),
+        data: JSON.stringify(update),
         success: function (response) {
-            if (response.status = "ok") {
+            if (response.status == "ok") {
                 window.alert("Se ejecutó correctamente el método.");
 
                 //Limpiar Modal
@@ -173,6 +177,22 @@ function editDiseases() {
                 jQuery("#patient-diseases-modal").modal("toggle");
 
                 //Recargar la página para volver a solicitar los datos del paciente (ya actualizados)
+                window.location.href = `/Home/GetPatientDetails?patientID=${response.id}`;
+
+            } else if (response.status == "same") {
+                window.alert("No se realizaron cambios, solamente se recargará la página");
+
+                //Limpiar Modal
+                jQuery("#diseaseDropdown").empty();
+                jQuery("#temporal-diseases").empty();
+                var previousDiseases = [];
+                var newDiseases = [];
+
+                //Ocultar Modal
+                jQuery("#patient-diseases-modal").modal("toggle");
+
+                //Recargar la página para volver a solicitar los datos del paciente (ya actualizados)
+                window.location.href = `/Home/GetPatientDetails?patientID=${response.id}`;
             } else {
                 window.alert(response.status);
             };
@@ -180,8 +200,9 @@ function editDiseases() {
         error: function (objXMLHttpRequest) {
             window.alert(`Algo salió mal!: ${objXMLHttpRequest}`);
         }
-    }); // REFERENCIA DE DONDE NOS QUEDAMOS DEL LADO DEL FRONT
+    });
 };
+// %%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%%
 
 function editDiseasesCancel() {
     //Limpiar campos (Dropdown y elementos li)
@@ -253,22 +274,23 @@ function getCurrentDiseasesButton(diseasesObject) {
         selectedDiseases.push(disease.DiseaseId);
     };
     */
-    var selectedDiseases = currentDiseases.map(d => d.DiseaseId);
+    var selectedDiseases = currentDiseases.map(d => d.DiseaseId); // Lo que está comentado inmediatamente arriba pero mas limpio.
 
-    //Limpiar campos (Dropdown y elementos li)
+    //Limpiar campos (Dropdown y elementos li) (por si las Flys)
     jQuery("#diseaseDropdown").empty();
     jQuery("#temporal-diseases").empty();
     var previousDiseases = [];
     var newDiseases = [];
 
     /*--------- Llenar DropdownList ---------*/
+    //Aquí no se llena como tal, solo se solicita la lista completa y junto a la lista de los padecimientos que ya tiene el paciente, se pasan como parámetros a la función que sí llena el dropdownlist
     jQuery.ajax({
         type: "Get",
         url: "GetJsonDiseases",
         contentType: "application/json; charset=utf-8",
         success: function (response) {
             if (response.status == "ok") {
-                fillDropdownForm(selectedDiseases, response.alldiseases);
+                fillDropdownForm(selectedDiseases, response.alldiseases); 
             } else {
                 alert(`Ocurrión un error al intentar obtener la información: ${response.status}`);
             };

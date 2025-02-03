@@ -436,6 +436,62 @@ namespace Data_Users
             }
         }
 
+        public void UpdateDiseases(List<int> DiseasesToDelete, List<int> DiseasesToAdd, int patientId)
+        {
+            try
+            {
+                using (TransactionScope scope = new TransactionScope()) // Existe la posibilidad de realizar muchos inserts y drops, por lo que para asegurarnos de que todo se ejecute correctamente usamos un transactionscope
+                {
+                    using (SqlConnection sqlUpdateDiseasesConnection = new SqlConnection(app_connection))
+                    {
+                        sqlUpdateDiseasesConnection.Open();
+
+                        if (DiseasesToDelete.Count() > 0) //Comprobamos que existan elementos a eliminar
+                        {
+                            using (SqlCommand updateCommand = new SqlCommand("Drop_Disease", sqlUpdateDiseasesConnection))
+                            {
+                                updateCommand.CommandType = CommandType.StoredProcedure;
+
+                                foreach (int idDisease in DiseasesToDelete)
+                                {
+                                    updateCommand.Parameters.Clear(); //Limpiar los parámetros antes de cada iteración
+
+                                    updateCommand.Parameters.AddWithValue("@idpatient", patientId);
+                                    updateCommand.Parameters.AddWithValue("@iddisease", idDisease);
+
+                                    updateCommand.ExecuteNonQuery();
+                                }
+                            }
+                        }
+
+                        if (DiseasesToAdd.Count() > 0) //Comprobamos que existan elementos a eliminar
+                        {
+                            using (SqlCommand updateCommand = new SqlCommand("Add_Disease", sqlUpdateDiseasesConnection))
+                            {
+                                updateCommand.CommandType = CommandType.StoredProcedure;
+
+                                foreach (int idDisease in DiseasesToAdd)
+                                {
+                                    updateCommand.Parameters.Clear();
+
+                                    updateCommand.Parameters.AddWithValue("@idpatient", patientId);
+                                    updateCommand.Parameters.AddWithValue("@iddisease", idDisease);
+
+                                    updateCommand.ExecuteNonQuery();
+                                }
+                            }
+                        }
+                        scope.Complete(); //Si llegamos a este punto sin errores, concretamos la transacción.
+                    }
+                }
+            }
+
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
 
         /// <summary>
         /// Retorna una lista con todas los objetos/registros Disease encontrados en la base de datos.

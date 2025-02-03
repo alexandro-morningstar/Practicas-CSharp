@@ -321,24 +321,32 @@ namespace Web_Cliente_Optica.Controllers
             }
         }
 
+        // %%%%%%%%%% CORREGIR ESTO DESPUES DE CORREGIR PatientEdit() %%%%%%%%%%%%%
         [HttpPost]
-        public JsonResult DiseasesUpdate(string update, int patientId)
+        public JsonResult DiseasesUpdate(DiseasesUpdate update, int patientId) // ### REVISAR PORQUE LA LISTA DE PREVIOUS DISEASES NO SE ACTUALIZAR EN JS CUANDO HAY UNA SEGUNDA PETICIÓN DE ACTUALIZACION DE PADECIMIENTOS
         {
             try
             {
-                using (HttpClient diseasesUpdateConnection = new HttpClient())
+                if (update.current == null)
                 {
-                    diseasesUpdateConnection.BaseAddress = new Uri("http://localhost:54263");
-                    var diseasesUpdateRequest = diseasesUpdateConnection.PostAsJsonAsync("api/Values/DiseasesUpdate", update).Result;
+                    return Json(new { status = "same", id = patientId }, JsonRequestBehavior.AllowGet);
+                }
+                else
+                {
+                    using (HttpClient diseasesUpdateConnection = new HttpClient())
+                    {
+                        diseasesUpdateConnection.BaseAddress = new Uri("http://localhost:54263");
+                        var diseasesUpdateRequest = diseasesUpdateConnection.PostAsJsonAsync($"api/Values/DiseasesUpdate?patientId={patientId}", update).Result;
 
-                    if (diseasesUpdateRequest.IsSuccessStatusCode)
-                    {
-                        return Json(new { status = "ok", id = patientId }, JsonRequestBehavior.AllowGet);
+                        if (diseasesUpdateRequest.IsSuccessStatusCode)
+                        {
+                            return Json(new { status = "ok", id = patientId }, JsonRequestBehavior.AllowGet);
+                        }
+                        else
+                        {
+                            throw new Exception("Error en la conexión al servicio REST");
+                        } // AQUI NOS QUEDAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOSSSS
                     }
-                    else
-                    {
-                        throw new Exception("Error en la conexión al servicio REST");
-                    } // AQUI NOS QUEDAMOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOSSSS
                 }
             }
             catch (Exception ex)
@@ -346,6 +354,8 @@ namespace Web_Cliente_Optica.Controllers
                 return Json(new { status = ex.Message }, JsonRequestBehavior.AllowGet);
             }
         }
+
+        // %%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%% %%%%%%%%%%%%%
 
         [HttpGet]
         public ActionResult GetPatientDetails(int patientID)

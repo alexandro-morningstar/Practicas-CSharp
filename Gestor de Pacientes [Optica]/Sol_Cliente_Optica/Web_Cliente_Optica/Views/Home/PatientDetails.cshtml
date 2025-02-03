@@ -35,7 +35,8 @@
 </header> <!--Final de barra de navegación superior-->
 
 <main class="container text-center">
-    <input type="hidden" id="currentPatientId" value="@Model.Patient.PatientId" />
+    <input type="hidden" id="currentPatientId" value="@Model.Patient.PatientId" /> <!--Input independiente: Se usa para solicitar el ID del paciente actual en cualquier momento-->
+
     <!--Inicio: Tabla modal para editar paciente-->
     <div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="patient-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModelLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -60,8 +61,8 @@
                             <div class="row clearfix">
                                 <div class="">
                                     <form id="patient-form">
-                                        @*action="/Home/AddUser/"*@
-                                        @*<input id="PatientId" type="hidden" name="PatientId" value="" />*@
+                                        @*action="/Home/AddUser/" La acción se evita porque es un evento que se maneja con JS JSON AJAX*@
+                                        <input id="PatientId" type="hidden" name="PatientId" value="" />
                                         <div class="input_field">
                                             <span><i class="fa-solid fa-person-half-dress"></i></span>
                                             <input id="FirstName" type="text" name="FirstName" value="" placeholder="Primer Nombre *" required />
@@ -132,8 +133,8 @@
                             <div class="row clearfix">
                                 <div class="">
                                     <form id="patient-form" onsubmit="return false;">
-                                    @*<form id="patient-form">*@
-                                        @*<input id="PatientId" type="hidden" name="PatientId" value="" />*@
+                                        @*<form id="patient-form">*@
+                                        <input id="PatientId" type="hidden" name="PatientId" value="" />
                                         <div class="input_field select_option">
                                             <select id="diseaseDropdown">
                                                 @*<option disabled selected>Padecimientos</option>*@
@@ -172,6 +173,7 @@
                 <li class="list-group-item">Apellido(s): @Model.Patient.LastName</li>
                 <li class="list-group-item">Edad: @Model.Patient.Age</li>
                 <li class="list-group-item">Genero: @Model.Patient.Gender.Gender</li>
+                @*<li class="list-group-item">Genero: @Model.Patient.Gender.Gender</li>*@
                 <li class="list-group-item">Teléfono: @Model.Patient.ContactNumber</li>
                 @if (Model.Patient.ContactNumber != "S/N")
                 {

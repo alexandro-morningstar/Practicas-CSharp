@@ -102,6 +102,14 @@ namespace Business_Users
             dataAppTools.AddMedicalRecord(lefteye, righteye);
         }
 
+        public void B_PatientDiseasesUpdate(DiseasesUpdate update, int patientId)
+        {
+            List<int> DiseasesToDelete = update.previous.Except(update.current).ToList(); //Diferencia de dos conjuntos: Se eliminan los padecimientos (IDs de los padecimientos) que antes estaban, pero ahora ya no.
+            List<int> DiseasesToAdd = update.current.Except(update.previous).ToList(); //Diferencia de dos conjuntos: Se agregan solo los padecimientos (IDs de los padecimientos) que ahora están, pero antes no estaban.
+
+            dataAppTools.UpdateDiseases(DiseasesToDelete, DiseasesToAdd, patientId);
+        }
+
         /// <summary>
         /// Instancia un objeto de la capa de datos para agregar nuevos padecimientos a un paciente existente.
         /// </summary>

@@ -275,6 +275,7 @@
     <Compile Include="FileLoggerProvider.cs" />
     <Compile Include="Models\Diopters.cs" />
     <Compile Include="Models\Diseases.cs" />
+    <Compile Include="Models\DiseasesUpdate.cs" />
     <Compile Include="Models\EyeOverview.cs" />
     <Compile Include="Models\Genders.cs" />
     <Compile Include="Models\LeftEyesRx.cs" />

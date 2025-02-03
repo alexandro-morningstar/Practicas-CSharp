@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Diopters.cs" />
     <Compile Include="Diseases.cs" />
+    <Compile Include="DiseasesUpdate.cs" />
     <Compile Include="EyeOverview.cs" />
     <Compile Include="Genders.cs" />
     <Compile Include="LeftEyesRx.cs" />
